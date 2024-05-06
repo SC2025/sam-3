@@ -29,6 +29,8 @@ font-weight: 1000;
     border: 2px solid black;
 }
 #qr{
+    height: 35%;
+    width: 35%;
     margin: 3px;
     padding: 3px;
     display: flex;
@@ -264,6 +266,7 @@ align-items: center;
     font-size: 0px;
 }
 .qrimgbottomhedding{
+    
     background-color: rgb(235, 171, 171);
     padding: 2PX;
     border: 1px solid black;
@@ -273,6 +276,10 @@ align-items: center;
     align-items: center;
     text-align: center;
 
+}
+#bill{
+    width: fit-content;
+    font-size: 15px;
 }
 </style>
 </head>
@@ -405,21 +412,21 @@ and proceed to payment.`)">
     <div id="qr_div">
     <img id="qr"  src="qr.jpg"  alt="qr.img"> 
 </div>
-<p class="qrimgbottomhedding">scan QR code and payment</p>
 <div class="paymentall">
     <marquee
     behavior="alternate"
     id="marquee"
     scrollamount = "7">
+    <p id="bill" class="qrimgbottomhedding"></p>
 
-    <div class="button2">-Payment App options-</div>
-    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <!-- <div class="button2">-Payment App options-</div> -->
+    <!-- <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
     <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
-    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
+    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a>  -->
     </marquee>
     
 
-</div>
+
 </div> 
 
  <p  id="id_input" class="big_font">Enter UPI transactiion id last 4 digit
@@ -708,6 +715,7 @@ r.innerHTML = `${d.value} your order summary `
 //befor 7 day 
 var seven_z = document.getElementById("i12")
 //PAYMENT QR
+document.getElementById("bill").innerHTML =  `${d.value} scan QR code and payment ${prise} RS`;
 
 // document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
 
@@ -755,8 +763,9 @@ setTimeout(() => {
 );
 },2000);
 
-
-
+secA_div.remove();
+g.remove();
+l.remove();
 
 
 }
