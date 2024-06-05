@@ -1,70 +1,1471 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahyadri Collection</title>
+<style>
+*{
+margin: 0;
+padding: 0;
+
+}
+/* #a1{
+opacity: 1;
+} */
+#get-bill{
+font-weight: 1000;
+}
+
+#qr_div{
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+}
+
+
+
+#section_A{
+border: 2PX solid rgb(252, 45, 30);
+opacity: 1;
+padding: 10px;
+
+/* background-color: rgb(228, 162, 81); */
+/* background-color: rgb(215, 235, 177); */
+gap: 10px;
+
+font-size: 20px;
+font-weight: 1000;
+}
+#section_B{
+border: 2PX solid rgb(255, 0, 0);
+border: 2PX solid;
+opacity: 0;
+padding: 10px;
+height: 30%;
+
+gap: 50px;
+
+font-size: 20px;
+font-weight: 1000;
+}
+
+
+
+#section_C{
+border: 2PX solid rgb(255, 0, 0);
+opacity: 0;
+padding: 10px;
+/* height: 1px; */
+gap: 10px;
+
+font-size: 10px;
+font-weight: 1000;
+}
+#section_D{
+border: 2PX solid red;
+opacity: 0;
+padding: 10px;
+gap: 10px;
+font-size: 20px;
+font-weight: 1000;
+}
+#name,#address,#mobno,#mobnover{
+padding: 8px;
+font-weight: 1000;
+}
+#d_blue{
+color: #ffffff;
+}
+
+.sec_d_p{
+    font-size: 13px;
+}
+
+option{
+padding: 5px;
+height: 20px;
+width: 20px;
+}
+
+.button{
+height: 40px;
+width: 35vh;
+background-color:#5783db;
+color: rgb(255, 255, 255);
+border: 3px solid rgb(0, 0, 0);
+padding: 2px;
+font-weight: 500;
+margin-top: 3px;
+font: bold;
+border-radius: 100PX;
+
+}
+
+.STAR{
+color: rgb(255, 255, 255);
+}
+.big_font{
+font-size: 15px;
+background-color: rgb(6, 255, 255);
+border: 2px solid;
+padding: 4px;
+border: 2px solid black;
+color: rgb(0, 0, 0);
+}
+
+
+
+#qr_info_all_data{
+border: 2px solid black;
+padding: 5px;
+}
+#qr_info_2{
+background-color: rgb(235, 84, 84);
+border: 1px solid black;
+padding: 4px;
+color: rgb(255, 255, 255);
+font-weight: 900;
+}
+#transaction_id{
+height: 20px;
+padding: 5px;
+margin-left: 5px;
+}
+#colour_change{
+color: rgb(0, 0, 0);
+font-weight: 1000;
+}
+.sec_d_element{
+display: flex;
+font-size: 10px;
+}
+#submit_btn{
+height: 40px;
+width: 35vh;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border: 3px solid rgb(194, 147, 119);
+padding: 2px;
+font-weight: 1000;
+margin-top: 3px;
+font: bold;
+}
+
+/* .small{
+height: 0px;
+width: 0px;
+font-size: 0px;
+background-color: brown;
+display: flex;
+}
+.imgsmall{
+height: 1px;
+width: 1px;
+background-color: brown;
+display: flex;
+} */
+BODY{
+    background-color: rgb(223, 229, 234);
+}
+#section_A>P{
+font-size: 15PX;
+}
+#addres_add,#product-quntity,#product-name{
+height: 30PX;
+background-color: rgb(220, 236, 217);
+margin-top: 2PX;
+margin-bottom: 2PX;
+border: 1 px solid black;
+font: bold;
+font-weight: 1000;
+color: rgb(255, 0, 0);
+}
+#product-name>option{
+border: 1px solid black;
+}
+.main_hedding{
+display: flex;
+border: 0.1px solid black;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 20px;
+}
+.name{
+background-color: rgb(190, 220, 210);
+border: 2px solid black;
+font-size: 20px;
+font-weight: 1000;
+margin: 10px;
+padding: 5px;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+.paymentall{
+width: 100;
+display: flex;
+border: 1px solid;
+}
+/* .gp{
+        border-radius: 50%;
+       
+        border: 20px rgb(255, 18, 18);
+height: 70px;
+padding: 5px;
+text-align: center;
+justify-content: center;
+align-items: center;
+display: flex;
+} */
+#spece_no{
+    font-size: 0px;
+    opacity: 0;
+}
+.gpbtn{
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 3px;
+        text-align: center;
+justify-content: center;
+align-items: center;
+margin: 10px;
+}
+#leg_hed {
+padding: 6px ;
+width: fit-content;
+border: 1px solid black;
+}
+
+
+#col_btn>button{
+
+    font: inherit;
+    height: fit-content;
+    width: 45%;
+    font-size: small;
+    padding: 0.5%;
+    border-radius: 10%;
+    margin-bottom: 5%;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+#Other{
+    border-radius: 50%;
+}
+
+
+#leg_par{
+    padding: 10 px;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    background-color: #ffffff;
+    /* display: flex; */
+    opacity: 0;
+}
+.google_pay3{height: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+.gp{
+        height: 50px;
+        display: flex;
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 1px;
+        text-align: center;
+justify-content: center;
+align-items: center;
+}
+.button2{
+  width: fit-content;
+    background-color: rgb(224, 224, 188);
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 3px;
+    border: 2px black;
+}
+#first_para{
+    opacity: 0;
+    font-size: 0px;
+}
+.qrimgbottomhedding{
+    background-color: rgb(255, 0, 0);
+    padding: 2PX;
+    border: 1px solid black;
+    border-radius: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+color: aliceblue;
+
+    font-size: 15px;
+}
+#qr{
+    height: 78%;
+    width: 78%;
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    border: 2px solid black;
+}
+#bill{
+    width: fit-content;
+    font-size: 15px;
+}
+.col_div{
+    height: 5%;
+    width: 5%;
+}
+
+#black{
+    color: aliceblue;
+    background-color: black;
+    
+  
+}
+#white{
+    background-color: rgb(255, 255, 255);
+}
+#red{
+    background-color: rgb(246, 103, 103);
+    color: #ffffff;
+}
+#d_red{
+    background-color: rgb(255, 4, 4);
+    color: #ffffff;
+}
+#pink{
+    background-color: 	#FFB6C1;
+}
+#d_pink{
+    background-color:		#FF69B4;
+    color: #ffffff;
+}
+#blue{
+    background-color: rgb(110, 52, 217);
+}
+#d_blue{
+    background-color: rgb(55, 0, 255);
+    color: #ffffff;
+}
+#cream{
+    background-color: #d9d8b9;
+}
+#d_cream{
+    background-color: #e9e483;
+}
+#sky{
+   background-color: rgb(110, 202, 232);
+}
+#d_sky{
+    background-color: rgb(0, 170, 255);
+    color: #ffffff;
+}
+#yellow{background-color: yellow;}
+
+#marron{background-color: maroon;
+    color: #ffffff;}
+
+#green{background-color:#1cd61c;color: #ffffff;}
+
+#skin{background-color: #ffdbac}
+
+#navy_blue{background-color: navy;
+   color: #ffffff;}
+
+   #orange{background-color:	#FF8C00;
+    color: #ffffff;}
+
+
+    .col_div{
+            border: 1px solid black;
+            height: 5vh;
+            width: 40%;
+            margin-left: 2px;
+        margin-right: 2px;
+        padding: 1px;
+           
+        }
+        .a{
+            display: flex;
+            align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight:1000 ;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 1px;
+        }
+
+
+
+
+
+</style>
 </head>
+<body id="body">
+
+
 <body>
 
-    <div class="container">
-        <header>
-            <h1>LIST PRODUCT</h1>
-            <div class="iconCart">
-                <img src="icon.png">
-                <div class="totalQuantity">0</div>
-            </div>
-        </header>
-
-        <div class="listProduct">
-
-            <div class="item">
-                <img src="images/1.webp" alt="">
-                <h2>CoPilot / Black / Automatic</h2>
-                <div class="price">$550</div>
-                <button>Add To Cart</button>
-            </div>
-
-        </div>
+<div >
+    <p id="spece_no">oooooo</p>
+    <div class="name"> सह्याद्री  कलेक्शन</div>
+    <div id="first_para">
+        <p id="op"></p>
+        <p id="on"></p>
+        
+         <div class="sec_d_element"> <p>Order ID :- </p><P id="oid"></P></div>
+         <p id="seven_day"></p>
+        
     </div>
+ 
+<div  id="section_A">
+  
+<div class="main_hedding" id="section_A_h">-Personal Details-</div>
+<p>नाव :- <input id="name" type="text"></p>
 
-    <div class="cart">
-        <h2>
-            CART
-        </h2>
+<p  >गाव निवडा :- <select   name=""  id="addres_add">
+<option value="select city">select city</option>
+<option value="rahimatpur">Rahimatpur</option>
+<option value="boriv">Boriv</option>
+<option value="Naharwadi">Naharwadi</option>
+<option value="Other">Other</option>
+</select>
 
-        <div class="listCart">
+<p >संपूर्ण पत्ता लिहा :- <input id="address" type="text"></p></p>
+<div>
+    <p id="mobnopara">whatsapp mob no :- <input id="mobno" type="number"></p></p>
+    <p >re-enter whatsapp mob no :- <button id="mobbtn"><input id="mobnover" type="number"></button></p></button>
+  
+<button  id="secA_btn"  class="button" onclick="secA()">Submit personal information</button>
 
-
-            <div class="item">
-                <img src="images/1.webp">
-                <div class="content">
-                    <div class="name">CoPilot / Black / Automatic</div>
-                    <div class="price">$550 / 1 product</div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span class="value">3</span>
-                    <button>+</button>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="buttons">
-            <div class="close">
-                CLOSE
-            </div>
-            <div class="checkout">
-                <a href="checkout.html">CHECKOUT</a>
-            </div>
-        </div>
-    </div>
+</div>
 
 
-    <script src="app.js"></script>
+</div>
+
+</div>
+
+
+<div id="section_B" >
+<div class="main_hedding" id="section_B_h"></div>
+<select  name="" id="product-name" 
+onchange="alert(`${document.getElementById(`name`).value} 
+तुम्ही  ${this.options[this.selectedIndex].text} प्रोड्कट निवडा आहे.
+Please select quantity.`)">
+<option  value="00" >प्रोड्कट निवडा</option>
+
+
+<option value="8">Cotton design Rumal</option>
+<option value="15">Cotton Check Colour Rumal</option>
+<option value="20">Cotton Check white Rumal</option>
+<option value="70">Scarf / Stole <BR> Size  CM *  CM</option>
+    <option value="15">Napkins </BR> Size 35 CM * 21 CM</option>
+    <option value="18">Napkins </BR> Size 40 CM * 25 CM</option>
+    <option value="79">4 to 5 Years</BR> girls dress</option>
+    <option value="299">leggeing</option>
+    <option value="120">Petticoat</option>
+</select>
+
+<select name="" id="product-quntity">
+    <option id="a1" value="4">4  pieces</option>
+    <option value="6">6  pieces</option>
+    <option value="8">8  pieces</option>
+    <option value="10">10  pieces</option>
+    <option value="12">12  pieces</option>
+</select>
+
+<button  class="button" id="secB_btn" onclick="secB()">view order summary</summary></button>
+
+
+                       
+
+</div>
+
+<div  id="section_C">
+
+    <div class="main_hedding" id="sec_c_heding"></div>
+    <h3><p id="order_id"></p></h3>
+<h3><p id="product_nane-print"></p></h3>
+
+<div id="leg_par">
+
+    <div id="col_btn">
+
+        <marquee
+        behavior="alternate"
+    id="col marqee"
+        scrollamount = "3">
+        <div id="leg_hed"></div>
+        </marquee>
+        <div>
+            <p>select colour 1st </p>
+<select name="" id=""  onchange="alert(`${document.getElementById(`name`).value} 
+तुम्ही 
+1st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
+${this.options[this.selectedIndex].text} Colour निवडा आहे.
+Please select 2nd ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} colour.`)">
+    <option value="">BLACK colour</option>
+    <option value="">WHITE  colour</option>
+
+    <option value="">RED  colour</option>
+    <option value="">dark RED colour</option>
+
+     
+    <option value="">NAVY BLUE colour</option>
+    <option value="">ORANGE colour</option>
+
+    <option value="">PINK  colour</option>
+    <option value="">dark PINK colour</option>
+
+    <option value="">BLUE colour</option>
+    <option value="">dark BLUE colour</option>
+
+    <option value="">CREAM colour</option>
+    <option value="">dark CREAM colour</option>
+
+    <option value="">SKY BLUE colour</option>
+    <option value="">dark SKY BLUE colour</option>
+
     
+    <option value="">YELLOW colour</option>
+    <option value="">MARRON colour</option>
+
+    
+    <option value="">GREEN colour</option>
+    <option value="">SKIN colour</option>
+
+   
+</select>
+</div>
+
+<div>
+    <p>select colour 2st</p>
+    <select name="" id=""  onchange="alert(`${document.getElementById(`name`).value} 
+    तुम्ही 
+    2st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
+    ${this.options[this.selectedIndex].text} Colour निवडा आहे.
+    Please select 2nd ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} colour.`) ${document.getElementById(`paraA`).innerHTML} = ${this.options[this.selectedIndex].text}">
+      <option value="">WHITE  colour</option>
+    <option value="">BLACK colour</option>
+
+    <option value="">RED  colour</option>
+    <option value="">dark RED colour</option>
+
+     
+    <option value="">NAVY BLUE colour</option>
+    <option value="">ORANGE colour</option>
+
+    <option value="">GREEN colour</option>
+    <option value="">SKIN colour</option>
+
+    <option value="">PINK  colour</option>
+    <option value="">dark PINK colour</option>
+
+    <option value="">BLUE colour</option>
+    <option value="">dark BLUE colour</option>
+
+    <option value="">CREAM colour</option>
+    <option value="">dark CREAM colour</option>
+
+    <option value="">SKY BLUE colour</option>
+    <option value="">dark SKY BLUE colour</option>
+
+    
+    <option value="">YELLOW colour</option>
+    <option value="">MARRON colour</option>
+
+    
+ 
+</select>
+
+</div>
+
+<div class="a">
+    <div class="col_div" id="black" > black</div>
+    <div class="col_div" id="white" > white</div>
+</div>
+
+<div class="a">
+    <div class="col_div" id="red"  > red colour</div>
+    <div class="col_div" id="d_red"  > dark red colour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="navy_blue"  > navy blue colour</div>
+    <div class="col_div" id="orange"  >Orange colour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="green"  > green colour</div>
+    <div class="col_div" id="skin"  > skin colour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="pink"  > pink colour</div>
+    <div class="col_div" id="d_pink"  > dark pink colour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="blue"  > blue colour</div>
+    <div class="col_div" id="d_blue"  > dark blue colour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="cream"  > cream colour</div>
+    <div class="col_div" id="d_cream"  >dark cream clour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="sky"  > sky blue colour</div>
+    <div class="col_div" id="d_sky"  > dark sky colour</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="yellow"  > yellow colour</div>
+    <div class="col_div" id="marron"  > marron colour</div>
+</div>
+
+
+
+
+    
+       
+</div>
+</div>
+<p id="para">
+    <p id="paraA">1</p>
+    <p id="paraB">2</p>
+</p>
+
+<h3><p id="product_discount"></p></h3>
+<h3><p id="product_price-print"></p></h3>
+<h3><p id="product_quantity-print"></p></h3>
+<h3><p class="qrimgbottomhedding" id="product_finalprice-print"></p></h3>
+
+<div>
+    <h3><p id="select_villege"></p></h3> 
+    <h3><p id="full_address"></p></h3>
+    <h3><p id="teansaction_id"></p></h3>
+</div>
+
+
+<div>
+    <div id="qr_div">
+    <img id="qr"  src="qr.jpg"  alt="qr.img"> 
+</div>
+<div class="paymentall">
+    <marquee
+    behavior="alternate"
+    id="marquee"
+    scrollamount = "7">
+    <p id="bill" class="qrimgbottomhedding"></p>
+
+    <!-- <div class="button2">-Payment App options-</div> -->
+    <!-- <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
+    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a>  -->
+    </marquee>
+    
+
+
+</div> 
+
+ <p  id="id_input" class="big_font">Enter UPI transactiion id last 4 digit
+    <input  id="transaction_id" value="" type="text">
+</p>
+<BUtton class="button"  onclick="secC()">preview And Submit Payment data </BUtton>
+</div> 
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="section_D">
+<p class="main_hedding" id="secD_heding"></p>
+<p class="sec_d_p" id ="all_sec_d_info"></p>
+<p class="sec_d_p" id="i1"></p>
+<p class="sec_d_p" id="i2"></p>
+<p class="sec_d_p"  id="i3"></p>
+<p class="sec_d_p_1" id="i16"></p>
+<p class="sec_d_p"  id="i4"></p>
+<p class="sec_d_p"  id="i5"></p>
+<p class="sec_d_p" id="i14"></p>
+<p class="sec_d_p"  id="i6"></p>
+<p class="sec_d_p"  id="i7"></p>
+<p class="sec_d_p"  id="i8"></p>
+<p class="sec_d_p"  id="i9"></p>
+<p class="sec_d_p"  id="i10"></p>
+<p class="sec_d_p"  id="i11"></p>
+<p class="sec_d_p" id="i12"></p>
+
+
+
+<marquee
+behavior="alternate"
+id="marquee"
+scrollamount = "4">
+<button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click to final submit</button>
+</marquee>
+</div> 
+
+
+</div>
+
+
+
+<script>
+    //section a
+var secA_div = document.getElementById("section_A");
+var a = document.getElementById("op");
+var b = document.getElementById("on");
+var c = document.getElementById("oid");
+var c_c = document.getElementById("seven_day");
+var d = document.getElementById("name");
+var e = document.getElementById("addres_add");
+
+
+
+var f = document.getElementById("address");
+var f_one = document.getElementById("secA_btn");
+
+
+var mobno = document.getElementById("mobno");
+var mobnover = document.getElementById("mobnover");
+var mobbtn = document.getElementById("mobbtn")
+
+const str = document.getElementById("mobnover").value; 
+
+mobbtn.addEventListener("click",function () {
+    mobnopara.style.opacity = "0";
+})
+
+        
+//section b
+var g = document.getElementById("section_B");
+var h  = document.getElementById("section_B_h");
+var i  = document.getElementById("product-name");
+var j  = document.getElementById("product-quntity");
+var k  =  document.getElementById("secB_btn");
+
+//section c
+var l  = document.getElementById("section_C");
+var m  = document.getElementById("product_nane-print");
+var n  = document.getElementById("product_price-print");
+var o  = document.getElementById("product_quantity-print");
+var p  = document.getElementById("product_discount");
+var q  = document.getElementById("product_finalprice-print");
+var r  = document.getElementById("sec_c_heding");
+var s  = document.getElementById("transaction_id");
+var s_one = document.getElementById("select_villege");
+var s_two = document.getElementById("full_address");
+// var s_one = document.getElementById("select_villege");
+
+  
+
+
+//sec d
+var t  = document.getElementById("section_D");
+var u  = document.getElementById("secD_heding");
+var v  = document.getElementById("order_id");
+var x  = document.getElementById("all_sec_d_info");
+var z = document.getElementById("i12")
+//section c
+
+
+
+//id print perr
+function ORDER_ID_PREE() {
+      myDate = new Date
+            var hours = myDate.getHours(); 
+            hours = hours % 12; 
+            hours = hours ? hours : 12; 
+            var minutes = myDate.getMinutes(); 
+            minutes = minutes < 10 ? '0' + minutes : minutes; 
+            var myTime = "सह्याद्री-" + hours + minutes + "-"
+            a.innerHTML = myTime
+    } ORDER_ID_PREE()
+    
+
+
+
+//id print next
+    function ORDER_ID_NEXT(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() );
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+    
+    // Printing the present date
+    b.innerHTML = `${month}${year}${day}-WKP`;
+    
+    
+    } ;ORDER_ID_NEXT();
+    c.innerHTML = a.innerHTML + b.innerHTML;
+
+//delivered date 
+ function seven_days_after_date(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() + 15);
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+    
+    // Printing the present date
+c_c.innerHTML = `${day}-${month}-${year}`;
+   }seven_days_after_date()
+
+
+
+
+
+
+
+
+
+
+   function secA(){
+
+    var str = document.getElementById("mobnover").value
+ var n_1 = str.slice(0,2); 
+ var n_2 = str.slice(2,4);
+ var n_3 = str.slice(4,6);
+ var n_4 = str.slice(6,8);
+ var n_5 = str.slice(8,10);
+ document.getElementById("spece_no").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
+
+
+
+     
+    if ( d.value == ``|| null) {
+    alert(`${"ptriy grahak"} please enter name; without this information order is not confirmed `)
+    d.style.backgroundColor = "red"
+    window.location.reload()
+    }
+    
+    else if(f.value == ``|| null)
+    {alert(`${d.value} please enter full address; without this information order is not confirmed `)
+    f.style.backgroundColor = "red"
+    window.location.reload()
+    }
+    
+    else if(
+    e.value == "select city" || ``|| null
+    ){alert(`${d.value} please select villege option; without this information order is not confirmed `)
+    document.getElementById("addres_add").style.backgroundColor = "black"
+    window.location.reload()
+    }
+    else if(
+    e.value == "Other" 
+    ){alert(`${d.value} तुम्ही Other हा पर्याय  निवडला आहे  
+    रहिमतपुर पासून 4 की.मी Free order delivery आहे ;
+
+    ${d.value} त्यामुळे रहिमतपुर मधील तुमच्या मित्राचा किंवा नातेवाईकाचा पत्ता द्या म्हणजे Free order delivery भेटेल.
+
+    जर तुमचा पत्ता  रहिमतपुर पासून 4 की.मी च्या आत असेल तर रहिमतपुर हा पर्याय  निवडा आणि खालील "Full detail Address:-" मध्ये पत्ता लिहा`)
+    document.getElementById("addres_add").style.backgroundColor = "black"
+    window.location.reload()
+    }
+    else if(mobno.value != mobnover.value){
+alert("तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा");
+mobnopara.style.opacity = "1";
+mobnopara.style.backgroundColor = "red";
+document.getElementById("sec_b").remove();
+
+}   
+    else{
+d.disabled = true;
+    e.disabled = true
+    f.disabled = true;
+    f_one.disabled = true;
+    // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
+    alert(`${d.value} 
+    तुमची Personal Details सेव्ह झाली आहे. 
+    तुमचा प्रोड्कट निवडा.`)
+    };
+    secA_div.style.opacity = 0.2;
+    g.style.opacity = 1;
+    h.innerHTML = `-- ${d.value} select product options --`
+
+
+  
+
+   } 
+
+
+
+
+
+   function secB() {
+  
+
+    if(
+    i.value == "00"){alert(`${d.value} please select  product options; without this information order is not confirmed`)
+    i.style.backgroundColor = "black"
+ 
+    }
+
+    else{
+        i.disabled = true
+    j.disabled = true;
+    k.disabled = true;
+    g.style.opacity = 0.2;
+l.style.opacity = 1;
+alert(`${d.value} 
+तुमची प्रोड्कट ची महिती सेव्ह झाली आहे.`)
+    
+//select villege
+// var select_villege = document.querySelector('#addres_add');
+//  var option_villege_select = select_villege.value;
+//     document.getElementById("select_villege").innerHTML = option_villege_select;
+   
+//address
+// var full_address = f.innerHTML;
+// s_two.innerHTML = full_address;
+
+//alert payment page 
+setTimeout(() => {
+        alert(`${d.value}
+        तुमचा ऑर्डर ID :- ${c.innerHTML} आहे.
+        Product name :-${name_product_name}
+        product get discount* :- 20 %
+        
+        one ${name_product_name} ${name_product_name} price :- ${productrs} RS
+        
+        Total ${product_quantity}  product price ${price} RS
+        
+        कोणत्याही पेमेंट अँप ने हा QR कोड स्कॅन करून ${price} RS पेमेंट करा. 
+        पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
+        पेमेंट झाले असेल तर फक्त UPI Transaction id लिहा`)
+    }, 10);
+
+
+// order id 
+v.innerHTML =  `Order ID :- ${c.innerHTML}`
+//select product 
+var select = i;
+    var name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+m.innerHTML = `Product name :-${name_product_name}`
+
+      // product rs
+      var  selectElement = i;
+ var productrs = selectElement.value;
+ n.innerHTML = `one ${name_product_name} price :- ${productrs} RS`;
+
+    //product quantity
+    var selectElement = j;
+    var product_quantity = selectElement.value;
+    o.innerHTML = `product quantity :- ${product_quantity}`;
+
+
+    //total price of selected product
+    var price =  productrs * product_quantity;
+   q.innerHTML = `Total ${product_quantity} product price ${price} RS`;
+   p.innerHTML = `productget discount* :- 20 %`
+
+//    //transaction id
+//    var transaction_id = s.innerHTML;
+
+// l.style.opacity = 1;
+r.innerHTML = `${d.value} your order summary `
+
+//befor 7 day 
+var seven_z = document.getElementById("i12")
+//PAYMENT QR
+document.getElementById("bill").innerHTML =  `${d.value} scan QR code and payment ${price} RS`;
+
+// document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
+
+// PAYMENTAW   https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=onkarjha2003@sbi%26am=1500%26tn=
+// document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
+// document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
+// document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
+// }
+document.getElementById("leg_hed").innerHTML = `${d.value} select ${name_product_name} colour`
+  //leggins colour;
+
+
+  //leg and park opption
+
+var select = i;
+    var leg_par_opp = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+// i14.innerHTML = `colour :-${leggins_colour}`
+
+
+if ( leg_par_opp  == "Petticoat" ) {
+    document.getElementById("leg_par").style.opacity = 1;
+    Orange.disabled = false;
+  navy_blue.disabled = false;
+                  skin.disabled = false;
+                green.disabled = false;
+              marron.disabled = false;
+            yellow.disabled = false;
+          d_skycol.disabled = false;
+  skycol.disabled = false;
+  d_creamcol.disabled = false;
+  creamcol.disabled = false;
+  d_bluecol.disabled = false;
+  bluecol.disabled = false;
+  d_pinkcol.disabled = false;
+  pinkcol.disabled = false;
+  d_redcol.disabled = false;
+  redcol.disabled = false;
+  whitecol.disabled = false;
+  blackcol.disabled = false;
+  Other.disabled = false;
+  
+}else if ( leg_par_opp  == "leggeing" ) {
+    document.getElementById("leg_par").style.opacity = 1;
+    Orange.disabled = false;
+  navy_blue.disabled = false;
+                  skin.disabled = false;
+                green.disabled = false;
+              marron.disabled = false;
+            yellow.disabled = false;
+          d_skycol.disabled = false;
+  skycol.disabled = false;
+  d_creamcol.disabled = false;
+  creamcol.disabled = false;
+  d_bluecol.disabled = false;
+  bluecol.disabled = false;
+  d_pinkcol.disabled = false;
+  pinkcol.disabled = false;
+  d_redcol.disabled = false;
+  redcol.disabled = false;
+  whitecol.disabled = false;
+  blackcol.disabled = false;
+  Other.disabled = false;}
+ else {
+    document.getElementById("leg_par").remove();
+   
+};  
+
+
+
+
+// if ( leg_par_opp  == "leggeing" ) {
+//     document.getElementById("leg_par").style.opacity = 1;
+  
+// } else {
+//     document.getElementById("leg_par").style.height = "0px";
+
+//     i.disabled = true;
+// }
+// console.log(i.innerText)
+//     console.log(i.value)
+
+}
+
+
+}
+
+   
+
+function secC(){
+ 
+    //id if elese
+ if(s.value == "")
+ {
+    alert(`${d.value}Please enter UPI Transaction id ;
+    without this information Order is not confirmed.`);
+    s.style.backgroundColor = "red";
+    secB()
+  }else{
+   t.style.opacity = 1;
+   l.style.opacity = 0.2;
+  
+  document.getElementById("i1").innerHTML = `तुमचा ऑर्डर ID :- ${c.innerHTML} आहे`;
+  document.getElementById("i2").innerHTML = `name of customer :- ${d.value}`;
+  document.getElementById("i3").innerHTML = `Villege Name :- ${e.value}`;
+  document.getElementById("i4").innerHTML = `Full Address :- ${f.value}`;
+  document.getElementById("i5").innerHTML = `${m.innerHTML}`;
+  document.getElementById("i6").innerHTML = `get discount :-  20 %`;
+  document.getElementById("i7").innerHTML = `${o.innerHTML}`;
+  document.getElementById("i8").innerHTML = `${n.innerHTML}`;
+  document.getElementById("i9").innerHTML = `${q.innerHTML}`;
+  document.getElementById("i10").innerHTML = `Order Date :- ${new Date}`;
+  //MISSING I12 ADDJEST
+  document.getElementById("i12").innerHTML = `order delivery before ${c_c.innerHTML}`;
+  document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
+document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
+document.getElementById("i14").innerHTML = document.getElementById("para").innerHTML;
+document.getElementById("i16").innerHTML = "whatsapp mob no-" +  document.getElementById("spece_no").innerHTML;
+
+setTimeout(() => {
+    alert(`${d.value} 
+    click to final submit या बटन ला क्लिक करा ;
+    तुम्हाला व्हाट्सअप वर ऑर्डर स्मरी भेटेल आणि ऑर्डर कन्फर्म होईल`
+);
+},100);
+
+secA_div.remove();
+g.remove();
+l.remove();
+
+
+
+
+
+//leggins_colour
+// var select = e1;
+//     var leggins_colour = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+// i14.innerHTML = `colour :- ${document.getElementById("para").innerHTML}`
+
+//LEGGINS COLOUR IF ELESE
+// if (leggins_colour == "Other") {
+//     alert(`${d.value}
+//     tumhi other ha option select kela aahe jar tumhala dusara colour payje aasel tar aata pymenyt kara aamcya custemer care cha tya badal umhala call yeil
+//     `)}else{console.log("ddd")} ;
+
+// }
+
+}}
+
+
+// var blackcol =  document.getElementById("black");
+// blackcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = blackcol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select black colour 
+//     QR कोड स्कॅन करून पेमेंट करा. ` )
+//   })
+
+
+//   var whitecol =  document.getElementById("white");
+// whitecol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = whitecol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select white colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+//   var redcol =  document.getElementById("red");
+// redcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = redcol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select red colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+
+//   var d_redcol =  document.getElementById("d_red");
+// d_redcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = d_redcol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select dark red colour
+//     QR कोड स्कॅन करून पेमेंट करा. ` )
+//   })
+
+
+
+
+
+//   var pinkcol =  document.getElementById("pink");
+// pinkcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = pinkcol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select pink colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+
+
+
+
+
+//   var d_pinkcol =  document.getElementById("d_pink");
+// d_pinkcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = d_pinkcol.innerHTML;
+//     document.getElementById("col_btn").remove();
+//     alert(`${d.value} you select dark pink colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+
+
+
+//   var bluecol =  document.getElementById("blue");
+// bluecol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = bluecol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select blue colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+//   var d_bluecol =  document.getElementById("d_blue");
+// d_bluecol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = d_bluecol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select dark blue colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+
+//   var creamcol =  document.getElementById("cream");
+// creamcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = creamcol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value}  you select cream colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+
+//   var d_creamcol =  document.getElementById("d_cream");
+// d_creamcol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = d_creamcol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select dark crean colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+//   var skycol =  document.getElementById("sky");
+// skycol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = skycol.innerHTML;
+//     document.getElementById("col_btn").remove()
+//     alert(`${d.value} you select sky blue colour
+//     QR कोड स्कॅन करून पेमेंट करा.` )
+//   })
+
+
+//   var d_skycol =  document.getElementById("d_sky");
+// d_skycol.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = d_skycol.innerHTML;
+//     document.getElementById("col_btn").remove();
+//     alert(`${d.value} you select dark sky blue colour
+//     QR कोड स्कॅन करून पेमेंट करा.
+//     ` )
+//   })
+
+
+//   var yellow =  document.getElementById("yellow");
+//         yellow.addEventListener("click" ,function(){
+//             document.getElementById("para").innerHTML = yellow.innerHTML;
+//             document.getElementById("col_btn").remove();
+//             alert(`${d.value} you select yellow colour
+//             QR कोड स्कॅन करून पेमेंट करा.
+//             ` )
+//           })
+  
+
+//           var marron =  document.getElementById("marron");
+//           marron.addEventListener("click" ,function(){
+//               document.getElementById("para").innerHTML = marron.innerHTML;
+//               document.getElementById("col_btn").remove();
+//               alert(`${d.value} you select marron colour
+//               QR कोड स्कॅन करून पेमेंट करा.
+//               ` )
+//             })
+   
+
+
+
+//             var green =  document.getElementById("green");
+//             green.addEventListener("click" ,function(){
+//                 document.getElementById("para").innerHTML = green.innerHTML;
+//                 document.getElementById("col_btn").remove();
+//                 alert(`${d.value} you select green colour
+//                 QR कोड स्कॅन करून पेमेंट करा.
+//                 ` )
+//               });
+         
+
+
+
+
+//               var skin =  document.getElementById("skin");
+//               skin.addEventListener("click" ,function(){
+//                   document.getElementById("para").innerHTML = skin.innerHTML;
+//                   document.getElementById("col_btn").remove();
+//                   alert(`${d.value} you select skin colour
+//                   QR कोड स्कॅन करून पेमेंट करा.
+//                   ` )
+//                 });
+       
+
+
+
+//                 var navy_blue =  document.getElementById("navy_blue");
+//                 navy_blue.addEventListener("click" ,function(){
+//                     document.getElementById("para").innerHTML = navy_blue.innerHTML;
+//                     document.getElementById("col_btn").remove();
+//                     alert(`${d.value} you select navy blue colour
+//                     QR कोड स्कॅन करून पेमेंट करा.
+//                     ` )
+//                   })
+
+
+
+           
+
+
+
+//                  var Orange =  document.getElementById("orange");
+// Orange.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = Orange.innerHTML;
+//     document.getElementById("col_btn").remove();
+//     alert(`${d.value} you select Orange colour
+//     QR कोड स्कॅन करून पेमेंट करा.
+//     ` )
+//   });
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  Orange.disabled = true;
+  navy_blue.disabled = true;
+                  skin.disabled = true;
+                green.disabled = true;
+              marron.disabled = true;
+            yellow.disabled = true;
+          d_skycol.disabled = true;
+  skycol.disabled = true;
+  d_creamcol.disabled = true;
+  creamcol.disabled = true;
+  d_bluecol.disabled = true;
+  bluecol.disabled = true;
+  d_pinkcol.disabled = true;
+  pinkcol.disabled = true;
+  d_redcol.disabled = true;
+  redcol.disabled = true;
+  whitecol.disabled = true;
+  blackcol.disabled = true;
+  Other.disabled = true;
+
+
+
+function gotowhatsapp(){
+    var b1 =  document.getElementById("i1").innerHTML;
+ var b2 =  document.getElementById("i2").innerHTML ;
+ var b3 =   document.getElementById("i3").innerHTML ;
+ var b4 =  document.getElementById("i4").innerHTML ;
+ var b5 =  document.getElementById("i5").innerHTML ;
+ var b6 =  document.getElementById("i6").innerHTML ;
+ var b7 =  document.getElementById("i7").innerHTML ;
+ var b8 =  document.getElementById("i8").innerHTML ;
+ var b9 =  document.getElementById("i9").innerHTML ;
+ var b10 =  document.getElementById("i10").innerHTML ;
+ var b11 =  document.getElementById("i11").innerHTML ;
+ var b12 =  document.getElementById("i12").innerHTML ;
+ var b14 =  document.getElementById("i14").innerHTML ;
+ var b15 =  document.getElementById("i16").innerHTML ;
+
+
+
+
+
+if (b2 === "" || b3 === ""||b4 === "") {
+    alert("please save again -Personal Details-")
+} else if(b5 === "" || b6 === ""||b7 === ""||b8 === ""||b9 === ""){
+    alert(b2+"-please save again product options -")
+}else if(b11 === "please enter again Transaction id "){
+    alert(b2+"-please enter -")
+}else{
+
+    var url = "https://wa.me/919834926132?text="
+    + "ORDER CONFIRM" + "%0a"
+    +"*"+ b1 +"*"+ "%0a" + "%0a"
+    +"*"+ b2 +"*"+ "%0a" + "%0a"
+    +"*"+ b15 +"*" + "%0a" + "%0a"
+    +"*"+ b3 +"*"+ "%0a" + "%0a"
+    +"*"+ b4 +"*"+"%0a" + "%0a"
+    +"*"+ b5 +"*"+ "%0a" + "%0a"
+    +"*"+ b14 +"*"+"%0a" + "%0a"
+    +"*"+ b6 +"*"+"%0a" + "%0a"
+    +"*"+ b7 +"*"+ "%0a" + "%0a"
+    +"*"+ b8 +"*"+ "%0a" + "%0a"
+    +"*"+ b9 +"*"+ "%0a" + "%0a"
+    +"*"+ b10 +"*"+ "%0a" + "%0a"
+    +"*"+ b12 +"*"+ "%0a" + "%0a"
+    +"*"+ b11 +"*"+ "%0a" + "%0a"
+
+     + "SEND SMS" 
+    window.open(url, '_blank').focus();
+}
+ 
+   
+    }
+
+   
+</script>
+
+
+
+
+
 </body>
 </html>
