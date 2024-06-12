@@ -101,17 +101,17 @@
     </div>
 
 
-
+   
       <div id="section_B">
         <!-- //secA -->
          <div id="whatsapp_data">
         <div>name:-  <div id="name_last"></div></div>
         <div>city:-  <div id="city_last"></div></div>
         <div>full address :- <div id="fulladdress_last"></div></div>
-        <div>whatspp mob.no:-     <div id="whatsappno_last"></div></div>
+        <div>whatspp mob.no:-  <div id="whatsappno_last"></div></div>
      <div id="selectproduct_last"></div>
-<div>discount :- 20 %</div>
 <div>quantity :-<div id="selectpro_quntity"></div></div>
+<div>discount :- 20 %</div>
 <div>prise :- <div id="product_prise"></div></div>
 <div id="upiID_last"></div>
 </div>
@@ -157,7 +157,7 @@ else if(whatsappno_first_mobnover.value == ""){
   alert("enter w m n")}
 else{
  //name
- document.getElementById("name_last").innerHTML = name_first.value;
+ document.getElementById("name_last").innerHTML =  name_first.value;
 
 //city
 var selectElement_city = city_first;
@@ -173,25 +173,49 @@ document.getElementById("whatsappno_last").innerHTML = whatsappno_first.value;
 
 //product name
 var selectElement_prod_name = product_name_first;
-  var product_name_last = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].text;
-document.getElementById("selectproduct_last").innerHTML = product_name_last;
+  var product_name_last_name = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].text;
+  var product_name_last_prise = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].value;
+  document.getElementById("selectproduct_last").innerHTML = product_name_last_name;
 
 //product Quantity
 var selectElement_prod_quantitye = product_quntity_first;
   var selectpro_quntity = selectElement_prod_quantitye.value;
 document.getElementById("selectpro_quntity").innerHTML = selectpro_quntity;
 
+
+//product prise
+document.getElementById("product_prise").innerHTML = `${selectpro_quntity}  X ${product_name_last_prise} = ${selectpro_quntity * product_name_last_prise}`;
+
 section_A.remove();
+
 }
 }
 
 function gotowhatsapp(){
 document.getElementById("upiID_last").innerHTML = UPI_ID_first.value;
-
+console.log(document.getElementById("whatsapp_data").innerHTML);
 var url = "https://wa.me/919834926132?text="
     + "ORDER CONFIRM" + "%0a"
-  + whatsapp_data_btn.innerHTML + "%0a"
-    window.open(url, '_blank').focus();
+
+  + document.getElementById("name_last").innerHTML + "%0a"
+
+  + document.getElementById("city_last").innerHTML + "%0a"
+  
+  + document.getElementById("fulladdress_last").innerHTML + "%0a"+"%0a"
+
+  + document.getElementById("whatsappno_last").innerHTML + "%0a" + "%0a"
+
+  + document.getElementById("selectproduct_last").innerHTML + "%0a"
+
+  + document.getElementById("selectpro_quntity").innerHTML + "%0a"
+
+  + "discount :- 20 %" + "%0a"
+
+  + document.getElementById("product_prise").innerHTML + "%0a"
+
+  + document.getElementById("upiID_last").innerHTML + "%0a"
+
+  window.open(url, '_blank').focus();
 }
 
 
