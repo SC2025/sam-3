@@ -103,6 +103,8 @@
     
     </div>
 
+
+    <div id="L4J_2DIV">
     <div id="LEGGINS">
     <div>select your leggins colour</div>
 <DIV id="L_1">Select 1st leegins  colour</DIV>
@@ -228,7 +230,12 @@
 
 
     </div>
-   
+  </div>
+
+
+
+
+
       <div id="section_B">
         <!-- //secA -->
        
@@ -241,7 +248,6 @@
      <div id="colour_last_div">
       <div id="col_last_1"></div>
       <div id="col_last_2"></div>
-      <div id="col_last_3"></div>
      </div>
 
 <div>quantity :-<div id="selectpro_quntity"></div></div>
@@ -330,19 +336,6 @@ var selectElement_prod_name = product_name_first;
   document.getElementById("selectproduct_last").innerHTML = product_name_last_name;
 
 
-      //LEGGIND AND JEAND OPACITY
-   
-if(product_name_last_name == "L" || "L1"){
-  document.getElementById("JEANS").remove();
-}
-else if(product_name_last_name == "J" || "J1"){
-  document.getElementById("LEGGINS").remove();
-}
-else{
-  document.getElementById("LEGGINS").remove();
-  document.getElementById("JEANS").remove();
-  document.getElementById("colour_last_div").remove();
-}
 
 
 //product Quantity
@@ -360,11 +353,76 @@ section_A.remove();
 // alert 
 alert(`${document.getElementById("name_last").innerHTML}
 your personal detail is save `)
+
+      //LEGGIND AND JEAND OPACITY
+      if(product_name_last_name == "L"  ){
+  document.getElementById("JEANS").remove();
+}
+else if(product_name_last_name == "L1"  ){
+  document.getElementById("JEANS").remove();
+}
+else if(product_name_last_name == "J"){
+  document.getElementById("LEGGINS").remove();
+}
+else if(product_name_last_name == "J1"){
+  document.getElementById("LEGGINS").remove();
+}
+else{
+  document.getElementById("colour_last_div").remove();
+  document.getElementById("L4J_2DIV").remove();
+}
 };
 }
 
 
 function gotowhatsapp(){
+
+
+
+
+if(document.getElementById("selectproduct_last").innerHTML == "L"){
+  var selectElement_L1_COL = document.getElementById("leggise_1");
+  var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_L1;
+console.log(COL_L1);
+var COLOUR1 = COL_L1;
+
+  var selectElement_L2_COL = document.getElementById("leggise_2");
+  var COL_L2 = selectElement_L2_COL.options[selectElement_L2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_L2;
+  console.log(COL_L2);
+  var COLOUR2 = COL_L2;
+}
+else if(document.getElementById("selectproduct_last").innerHTML == "L2"){
+  var selectElement_L1_COL = document.getElementById("leggise_1");
+  var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_L1;
+console.log(COL_L1);
+var COLOUR1 = COL_L1;
+
+  var selectElement_L2_COL = document.getElementById("leggise_2");
+  var COL_L2 = selectElement_L2_COL.options[selectElement_L2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_L2;
+  console.log(COL_L2);
+  var COLOUR2 = COL_L2;
+}
+else if(document.getElementById("selectproduct_last").innerHTML == "J"){
+  var selectElement_J1_COL = document.getElementById("jeans_1");
+  var COL_J1 = selectElement_J1_COL.options[selectElement_J1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_J1;
+console.log(COL_J1);
+var COLOUR1 = COL_J1;
+
+  var selectElement_J2_COL = document.getElementById("jeans_2");
+  var COL_J2 = selectElement_J2_COL.options[selectElement_J2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_J2;
+  console.log(COL_J2);
+  var COLOUR2 = COL_J2;
+}
+else{
+  var COLOUR1 = "NA";
+  var COLOUR2 = "NA";
+}
 
 
 
@@ -393,6 +451,10 @@ var url = "https://wa.me/919834926132?text="
   + document.getElementById("whatsappno_last").innerHTML + "%0a" + "%0a"
 
   + document.getElementById("selectproduct_last").innerHTML + "%0a"
+
+  +   COLOUR1 + "%0a"
+
+  +  COLOUR2+ "%0a"
 
   + document.getElementById("selectpro_quntity").innerHTML + "%0a"
 
