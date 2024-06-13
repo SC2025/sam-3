@@ -6,7 +6,18 @@
   <title>Document</title>
 </head>
 <body>
+
+
+
 <div id="section_A">
+
+  <div>
+    <div id="pree_id"></div>
+    <div id="last_id"></div>
+    <div id="order_del_date"></div>
+
+  </div>
+
   <p>नाव :- <input id="name" type="text"></p>
 
 <p  >गाव निवडा :- 
@@ -16,6 +27,7 @@
 <option value="Naharwadi">Naharwadi</option>
 <option value="Other">Other</option>
 </select>
+
 
 
    <p >संपूर्ण पत्ता लिहा :- 
@@ -238,13 +250,12 @@
 
       <div id="section_B">
         <!-- //secA -->
-       
+       <div id="id_last"></div>
         <div>name:-  <div id="name_last"></div></div>
         <div>city:-  <div id="city_last"></div></div>
         <div>full address :- <div id="fulladdress_last"></div></div>
         <div>whatspp mob.no:-  <div id="whatsappno_last"></div></div>
      <div id="selectproduct_last"></div>
-
      <div id="colour_last_div">
       <div id="col_last_1"></div>
       <div id="col_last_2"></div>
@@ -253,10 +264,8 @@
 <div>quantity :-<div id="selectpro_quntity"></div></div>
 <div>discount :- 20 %</div>
 <div>prise :- <div id="product_prise"></div></div>
-
-
-
-
+<div id="order_date_last"></div>
+<div id="order_del_date_last"></div>
 </div>
 
 
@@ -297,8 +306,83 @@ var whatsapp_data_btn = document.getElementById("whatsapp_data");
 //secC
 var UPI_ID_first = document.getElementById("transaction_id");
 
+document.getElementById("mobbtn").addEventListener("click",function() {
+  document.getElementById("mobnopara").style.opacity = "0";
+})
+
+
 function secA(){
 
+  //pree order id
+function ORDER_ID_PREE() {
+      myDate = new Date
+            var hours = myDate.getHours(); 
+            hours = hours % 24; 
+            hours = hours ? hours : 24; 
+            var minutes = myDate.getMinutes(); 
+            minutes = minutes < 10 ? '0' + minutes : minutes; 
+            var myTime = "सह्याद्री-" + hours + minutes + "-"
+            document.getElementById("pree_id").innerHTML = myTime
+          } ;
+          ORDER_ID_PREE()
+
+//next order id
+function ORDER_ID_NEXT(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() );
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+    
+    // Printing the present date
+    document.getElementById("last_id").innerHTML = `${month}${year}${day}-MPP`;
+  };
+    ORDER_ID_NEXT();
+
+        //delivered date 
+        function fifteen_days_after_date(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() + 15);
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+    
+    // Printing the present date
+document.getElementById("order_del_date").innerHTML = `${day}-${month}-${year}`;
+   };
+   fifteen_days_after_date();
+
+    document.getElementById("id_last").innerHTML = document.getElementById("pree_id").innerHTML + document.getElementById("last_id").innerHTML;
+    document.getElementById("order_date_last").innerHTML = new Date;
+    document.getElementById("order_del_date_last").innerHTML = document.getElementById("order_del_date").innerHTML;
+
+  
 if (name_first.value == "") {
  alert("please enter name")}
 else if(fulladdress_first.value == ""){
@@ -326,8 +410,13 @@ document.getElementById("city_last").innerHTML = city_last;
 document.getElementById("fulladdress_last").innerHTML = fulladdress_first.value;
 
 //whatsapp no
-document.getElementById("whatsappno_last").innerHTML = whatsappno_first.value;
-
+var str = document.getElementById("mobnover").value
+ var n_1 = str.slice(0,2); 
+ var n_2 = str.slice(2,4);
+ var n_3 = str.slice(4,6);
+ var n_4 = str.slice(6,8);
+ var n_5 = str.slice(8,10);
+ document.getElementById("whatsappno_last").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
 
 //product name
 var selectElement_prod_name = product_name_first;
@@ -376,8 +465,6 @@ else{
 
 
 function gotowhatsapp(){
-
-
 
 
 if(document.getElementById("selectproduct_last").innerHTML == "L"){
@@ -438,15 +525,16 @@ please click on checkBox`);
 document.getElementById("checkbox_div").style.backgroundColor = "rgb(245, 153, 153";
   }
 else{
-  document.getElementById("upiID_last").innerHTML = UPI_ID_first.value;
-var url = "https://wa.me/919834926132?text="
-    + "ORDER CONFIRM" + "%0a"
+
+    var url = "https://wa.me/919834926132?text="
+
+    + "Order Details" + "%0a"
+
+    + "order ID -" +  document.getElementById("id_last").innerHTML + "%0a"
 
   + document.getElementById("name_last").innerHTML + "%0a"
 
-  + document.getElementById("city_last").innerHTML + "%0a"
-  
-  + document.getElementById("fulladdress_last").innerHTML + "%0a"+"%0a"
+  + document.getElementById("city_last").innerHTML + "," + document.getElementById("fulladdress_last").innerHTML + "%0a"+"%0a"
 
   + document.getElementById("whatsappno_last").innerHTML + "%0a" + "%0a"
 
@@ -462,11 +550,19 @@ var url = "https://wa.me/919834926132?text="
 
   + document.getElementById("product_prise").innerHTML + "%0a"
 
+  + "ORDER DATE" + document.getElementById("order_date_last").innerHTML + "%0a"
+
+    + "order delivery before" + document.getElementById("order_del_date_last").innerHTML + "*" + "%0a"
+
   + "XXXXXX" + document.getElementById("upiID_last").innerHTML + "%0a"
 
-  window.open(url, '_blank').focus();
-}
+  + "send SMS"
+  window.open(url,'_blank').focus();
 
+
+  document.getElementById("upiID_last").innerHTML = UPI_ID_first.value;
+
+}
 
 
 }
@@ -476,3 +572,7 @@ var url = "https://wa.me/919834926132?text="
 </script>
 </body>
 </html>
+
+
+
+
