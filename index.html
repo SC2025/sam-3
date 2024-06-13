@@ -41,7 +41,10 @@
     <option value="15">Checks Multi-Color RUMAL 50 cm x 53 cm</option>
     <option value="21">Checks White-Color RUMAL 50 cm x 53 cm</option>
     
-      <option value="20">Socks</option>
+      <option value="20">L</option>
+      <option value="20">L1</option>
+      <option value="12">J</option>
+    
     
       <option value="99">Gym sport Baniyan M Size</option>
     <option value="105">Gym sport Baniyan  L size</option>
@@ -100,25 +103,164 @@
     
     </div>
 
+    <div id="LEGGINS">
+    <div>select your leggins colour</div>
+<DIV id="L_1">Select 1st leegins  colour</DIV>
+<select id="leggise_1">
+       <option value="">BLACK colour</option>
+      <option value="">WHITE  colour</option>
+  
+      <option value="">RED  colour</option>
+      <option value="">dark RED colour</option>
+  
+       
+      <option value="">NAVY BLUE colour</option>
+      <option value="">ORANGE colour</option>
+  
+      <option value="">GREEN colour</option>
+      <option value="">SKIN colour</option>
+  
+      <option value="">PINK  colour</option>
+      <option value="">dark PINK colour</option>
+  
+      <option value="">BLUE colour</option>
+      <option value="">dark BLUE colour</option>
+  
+      <option value="">CREAM colour</option>
+      <option value="">dark CREAM colour</option>
+  
+      <option value="">SKY BLUE colour</option>
+      <option value="">dark SKY BLUE colour</option>
+  
+      
+      <option value="">YELLOW colour</option>
+      <option value="">MARRON colour</option>
+   
+</select>
+<div id="L_2">Select 2nd leggins colour</div>
+<select id="leggise_2">
+       <option value="">BLACK colour</option>
+      <option value="">WHITE  colour</option>
+  
+      <option value="">RED  colour</option>
+      <option value="">dark RED colour</option>
+  
+       
+      <option value="">NAVY BLUE colour</option>
+      <option value="">ORANGE colour</option>
+  
+      <option value="">GREEN colour</option>
+      <option value="">SKIN colour</option>
+  
+      <option value="">PINK  colour</option>
+      <option value="">dark PINK colour</option>
+  
+      <option value="">BLUE colour</option>
+      <option value="">dark BLUE colour</option>
+  
+      <option value="">CREAM colour</option>
+      <option value="">dark CREAM colour</option>
+  
+      <option value="">SKY BLUE colour</option>
+      <option value="">dark SKY BLUE colour</option>
+  
+      
+      <option value="">YELLOW colour</option>
+      <option value="">MARRON colour</option>
+   
+</select>
 
+
+
+    </div>
+
+    <div id="JEANS">
+  <div>select your jeans colour</div>
+<div id="J_1">Select 1st jeans colour</div>
+<select name="" id="jeans_1">
+             <option value="">28 no.blue</option>
+             <option value="">28 no.grey</option>
+             <option value="">28 no.black</option>
+           
+             <option value="">30 no.blue</option>
+             <option value="">30 no.grey</option>
+             <option value="">30 no.black</option>
+           
+             <option value="">32 no.blue</option>
+             <option value="">32 no.grey</option>
+             <option value="">32 no.black</option>
+           
+             <option value="">34 no.blue</option>
+             <option value="">34 no.grey</option>
+             <option value="">34 no.black</option>
+           
+             <option value="">36 no.blue</option>
+             <option value="">36 no.grey</option>
+             <option value="">36 no.black</option>
+           
+   
+</select>
+
+<div id="J_2">Select 2nd jeans colour</div>
+<select name="" id="jeans_2">
+             <option value="">28 no.blue</option>
+             <option value="">28 no.grey</option>
+             <option value="">28 no.black</option>
+           
+             <option value="">30 no.blue</option>
+             <option value="">30 no.grey</option>
+             <option value="">30 no.black</option>
+           
+             <option value="">32 no.blue</option>
+             <option value="">32 no.grey</option>
+             <option value="">32 no.black</option>
+           
+             <option value="">34 no.blue</option>
+             <option value="">34 no.grey</option>
+             <option value="">34 no.black</option>
+           
+             <option value="">36 no.blue</option>
+             <option value="">36 no.grey</option>
+             <option value="">36 no.black</option>
+           
+   
+</select>
+
+
+    </div>
    
       <div id="section_B">
         <!-- //secA -->
-         <div id="whatsapp_data">
+       
         <div>name:-  <div id="name_last"></div></div>
         <div>city:-  <div id="city_last"></div></div>
         <div>full address :- <div id="fulladdress_last"></div></div>
         <div>whatspp mob.no:-  <div id="whatsappno_last"></div></div>
      <div id="selectproduct_last"></div>
+
+     <div id="colour_last_div">
+      <div id="col_last_1"></div>
+      <div id="col_last_2"></div>
+      <div id="col_last_3"></div>
+     </div>
+
 <div>quantity :-<div id="selectpro_quntity"></div></div>
 <div>discount :- 20 %</div>
 <div>prise :- <div id="product_prise"></div></div>
+
+
+
+
+</div>
+
+
 <div id="upiID_last"></div>
 </div>
 
 
 
 <!-- //secC -->
+
 
 
 <DIV>Payment gatway</DIV>
@@ -128,6 +270,10 @@
    <div id="id_input" >Enter UPI transactiion id last 4 digit
     <input  id="transaction_id" value="" type="number">
    </div>
+   <div id="checkbox_div">
+    <div>i know all terms and conditions</div>
+    <input type="checkbox" id="myCheck">
+  </div>
         <button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click to final submit</button>
        
         </div> 
@@ -155,7 +301,13 @@ else if(whatsappno_first.value == ""){
 alert("enter w m n")}
 else if(whatsappno_first_mobnover.value == ""){
   alert("enter w m n")}
-else{
+else if(whatsappno_first.value.length != 10){
+alert("please enter 10 digit mobail no you enter" + whatsappno_first.value.length + "digit")
+}
+else if(whatsappno_first.value != whatsappno_first_mobnover.value){
+alert("mobail no. is not match" + "you enter" + whatsappno_first.value + "and" + whatsappno_first_mobnover.value)
+}
+  else{
  //name
  document.getElementById("name_last").innerHTML =  name_first.value;
 
@@ -177,6 +329,22 @@ var selectElement_prod_name = product_name_first;
   var product_name_last_prise = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].value;
   document.getElementById("selectproduct_last").innerHTML = product_name_last_name;
 
+
+      //LEGGIND AND JEAND OPACITY
+   
+if(product_name_last_name == "L" || "L1"){
+  document.getElementById("JEANS").remove();
+}
+else if(product_name_last_name == "J" || "J1"){
+  document.getElementById("LEGGINS").remove();
+}
+else{
+  document.getElementById("LEGGINS").remove();
+  document.getElementById("JEANS").remove();
+  document.getElementById("colour_last_div").remove();
+}
+
+
 //product Quantity
 var selectElement_prod_quantitye = product_quntity_first;
   var selectpro_quntity = selectElement_prod_quantitye.value;
@@ -188,12 +356,31 @@ document.getElementById("product_prise").innerHTML = `${selectpro_quntity}  X ${
 
 section_A.remove();
 
-}
+
+// alert 
+alert(`${document.getElementById("name_last").innerHTML}
+your personal detail is save `)
+};
 }
 
+
 function gotowhatsapp(){
-document.getElementById("upiID_last").innerHTML = UPI_ID_first.value;
-console.log(document.getElementById("whatsapp_data").innerHTML);
+
+
+
+  if (document.getElementById("transaction_id").value == ""){
+alert(document.getElementById("name_last").innerHTML + "enter last 4 digit of UPI transaction ID")
+  }
+  else if(document.getElementById("transaction_id").value.length != 4 ){
+alert(document.getElementById("name_last").innerHTML + "enter only last 4 digit of UPI transaction ID")
+  }
+  else if(document.getElementById("myCheck").checked != true){
+alert(`${document.getElementById("name_last").innerHTML}  
+please click on checkBox`);
+document.getElementById("checkbox_div").style.backgroundColor = "rgb(245, 153, 153";
+  }
+else{
+  document.getElementById("upiID_last").innerHTML = UPI_ID_first.value;
 var url = "https://wa.me/919834926132?text="
     + "ORDER CONFIRM" + "%0a"
 
@@ -213,9 +400,13 @@ var url = "https://wa.me/919834926132?text="
 
   + document.getElementById("product_prise").innerHTML + "%0a"
 
-  + document.getElementById("upiID_last").innerHTML + "%0a"
+  + "XXXXXX" + document.getElementById("upiID_last").innerHTML + "%0a"
 
   window.open(url, '_blank').focus();
+}
+
+
+
 }
 
 
