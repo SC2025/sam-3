@@ -506,7 +506,8 @@ function ORDER_ID_NEXT(){
     
     day = day.length == 1 ?
     day.padStart('2', '0') : day;
-    
+        //PRINTING TODAY DATE
+        document.getElementById("order_date_last").innerHTML = `${day}.${month}.${year}`;
     // Printing the present date
     document.getElementById("last_id").innerHTML = `${month}${year}${day}-MPP`;
   };
@@ -520,7 +521,7 @@ function ORDER_ID_NEXT(){
     
     // Adding one date to the present date
     d.setDate(d.getDate() + 15);
-    
+   
     let year = d.getFullYear()
     let month = String(d.getMonth() + 1)
     let day = String(d.getDate())
@@ -532,14 +533,15 @@ function ORDER_ID_NEXT(){
     
     day = day.length == 1 ?
     day.padStart('2', '0') : day;
-    
-    // Printing the present date
-document.getElementById("order_del_date").innerHTML = `${day}-${month}-${year}`;
+
+    // Printing the DELIVERY date
+document.getElementById("order_del_date").innerHTML = `${day}.${month}.${year}`;
+
    };
    fifteen_days_after_date();
 
     document.getElementById("id_last").innerHTML = document.getElementById("pree_id").innerHTML + document.getElementById("last_id").innerHTML;
-    document.getElementById("order_date_last").innerHTML = new Date;
+    
     document.getElementById("order_del_date_last").innerHTML = document.getElementById("order_del_date").innerHTML;
 
   
@@ -787,11 +789,11 @@ else{
 
     var url = "https://wa.me/919834926132?text="
 
-    + "Order Details" + "%0a"+ "%0a"
+    + "Order Details" + "%0a"
 
-    + "order ID -" +  document.getElementById("id_last").innerHTML + "%0a"+ "%0a"
+    + "order ID -" +  document.getElementById("id_last").innerHTML + "%0a"
 
-  + document.getElementById("name_last").innerHTML + "%0a"+ "%0a"
+  + document.getElementById("name_last").innerHTML + "%0a"
 
   + document.getElementById("city_last").innerHTML + "," + document.getElementById("fulladdress_last").innerHTML + "%0a"+"%0a"
 
@@ -799,19 +801,19 @@ else{
 
   + document.getElementById("selectproduct_last").innerHTML + "%0a"+ "%0a"
 
-  +   COLOUR1 + "/" +  COLOUR2 + "/"  + COLOUR3 + "%0a"+ "%0a"
+  +   COLOUR1 + "/" +  COLOUR2 + "/"  + COLOUR3 + "%0a"
 
-  +"quntity:- " + document.getElementById("selectpro_quntity").innerHTML + "%0a"+ "%0a"
+  +"quntity:- " + document.getElementById("selectpro_quntity").innerHTML + "%0a"
 
-  + "discount :- 20 %" + "%0a"+ "%0a"
+  + "discount :- 20 %" + "%0a"
 
   + document.getElementById("product_prise").innerHTML + "%0a"+ "%0a"
 
-  + "ORDER DATE" + " " + document.getElementById("order_date_last").innerHTML + "%0a"+ "%0a"
+  + "ORDER DATE" + " " + document.getElementById("order_date_last").innerHTML + "%0a"
 
-    + "order delivery before" + " " + document.getElementById("order_del_date_last").innerHTML + "*" + "%0a"+ "%0a"
+    + "order delivery before" + " " + document.getElementById("order_del_date_last").innerHTML + "*" + "%0a"
 
-  + "trans.ID:-XXXXXXX" +  UPI_ID_first.value + "%0a"+ "%0a"
+  + "trans.ID:-XXXXXXX" +  UPI_ID_first.value + "%0a"
 
   + "send SMS"
   window.open(url,'_blank').focus();
