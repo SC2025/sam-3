@@ -787,31 +787,31 @@ else{
 
     var url = "https://wa.me/919834926132?text="
 
-    + "Order Details" + "%0a"
+    + "Order Details" + "%0a"+ "%0a"
 
-    + "order ID -" +  document.getElementById("id_last").innerHTML + "%0a"
+    + "order ID -" +  document.getElementById("id_last").innerHTML + "%0a"+ "%0a"
 
-  + document.getElementById("name_last").innerHTML + "%0a"
+  + document.getElementById("name_last").innerHTML + "%0a"+ "%0a"
 
   + document.getElementById("city_last").innerHTML + "," + document.getElementById("fulladdress_last").innerHTML + "%0a"+"%0a"
 
   + document.getElementById("whatsappno_last").innerHTML + "%0a" + "%0a"
 
-  + document.getElementById("selectproduct_last").innerHTML + "%0a"
+  + document.getElementById("selectproduct_last").innerHTML + "%0a"+ "%0a"
 
-  +   COLOUR1 + "/" +  COLOUR2 + "/"  + COLOUR3 + "%0a"
+  +   COLOUR1 + "/" +  COLOUR2 + "/"  + COLOUR3 + "%0a"+ "%0a"
 
-  +"quntity;- " + document.getElementById("selectpro_quntity").innerHTML + "%0a"
+  +"quntity:- " + document.getElementById("selectpro_quntity").innerHTML + "%0a"+ "%0a"
 
-  + "discount :- 20 %" + "%0a"
+  + "discount :- 20 %" + "%0a"+ "%0a"
 
-  + document.getElementById("product_prise").innerHTML + "%0a"
+  + document.getElementById("product_prise").innerHTML + "%0a"+ "%0a"
 
-  + "ORDER DATE" + " " + document.getElementById("order_date_last").innerHTML + "%0a"
+  + "ORDER DATE" + " " + document.getElementById("order_date_last").innerHTML + "%0a"+ "%0a"
 
-    + "order delivery before" + " " + document.getElementById("order_del_date_last").innerHTML + "*" + "%0a"
+    + "order delivery before" + " " + document.getElementById("order_del_date_last").innerHTML + "*" + "%0a"+ "%0a"
 
-  + "trans.ID:-XXXXXXX" +  UPI_ID_first.value + "%0a"
+  + "trans.ID:-XXXXXXX" +  UPI_ID_first.value + "%0a"+ "%0a"
 
   + "send SMS"
   window.open(url,'_blank').focus();
