@@ -94,8 +94,8 @@ padding: 4px;
 }
 #qr_img{
   border: 2px solid black;
-  height: 80vh;
-  width: 80%;
+  height: 40vh;
+  width: 40%;
   padding: 1%;
 }
   </style>
@@ -629,7 +629,7 @@ if(selectpro_quntity * product_name_last_prise > 100){
 console.log(transport_charge)
 
 //product prise
-document.getElementById("product_prise").innerHTML = `${selectpro_quntity}  X  ${product_name_last_prise} ADD ${transport_charge} RS transport charge = ${selectpro_quntity * product_name_last_prise + transport_charge}`;
+document.getElementById("product_prise").innerHTML = `${selectpro_quntity}  X  ${product_name_last_prise} ADD ${transport_charge} RS transport charge = ${selectpro_quntity * product_name_last_prise + transport_charge} RS`;
 section_A.remove();
 
 
