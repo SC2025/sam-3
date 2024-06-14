@@ -1,229 +1,834 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <STyle>
-        #D1,#D2,#D3,#D4{
-            height: 50VH;
-             background-color: black;
-            width: 100%;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0;
+padding: 0;
+box-sizing: border-box;};
 
-        #A1,#A2,#A3,#A4{
-            height: 3VH;
-            width: 50%;
-        }
-
-        #C1,#C2,#C3,#C4{
-          font: bold;
-          font-weight: 1000;
-          font-size: 16px;
-          color: rgb(0, 0, 0);
-        }
-#all1,#all2,#all3,#all4{
-background-color: rgb(255, 255, 255);
-border: 2px solid black;
-height: fit-content;
-width: 50%;
-/* padding: 7PX; */
-padding-left: 7PX;
-margin: 2PX;
-font-weight: 1000;
-
-}
-   img{
-  padding: 3px;
-    height: 80px;
-    width: 80px;
- 
-   }     
-#alldiv1,#alldiv2{
-    display: flex;
-    height: fit-content;
+html,body{
 width: 100%;
+height: 100%;}
+
+#section_A,#section_B,#L4J_2DIV{
+  background-color: #dfe3f0;
+  width: 100%;
+  font: bold;
+  font-weight: 400;
+  margin: 3px;
+  padding: 6px;
+  border: 2px solid black;
+ font-size: 13PX;
+ font-weight: 900;
+}
+
+input{
+  padding: 3px;
+  font-weight: 800;
+  background-color: rgb(241, 249, 214);
+  margin: 5px;
+}
+
+#mobnover{
+  font-weight: 800;
+  background-color: rgb(241, 249, 214);
+padding: 0;
+margin: 0;
 font-weight: 1000;
-font-size: 15px;
-color: rgb(0, 0, 0);
-/* padding: 5px; */
 }
+
+#mobbtn{
+  font-weight: 800;
+  background-color: rgb(205, 229, 221);
+padding: 0;
+margin: 7px;
+font-weight: 1000;
+}
+
+.button{
+font-weight: 1000;
+padding: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background-color: rgb(255, 55, 0);
+color: azure;
+border-radius: 10px;
+}
+
+select{
+  padding: 3px;
+  font-weight: 800;
+  background-color: rgb(205, 229, 221);
+  margin: 7px;
+
+}
+
+.opacity_0{
+  opacity: 0;
+  font-size: 0px;
+}
+
+/* //sec_b */
+#section_B>div{
+display: flex;
+margin: 6px;
+}
+
 .heding{
-  
-    font-weight: 1000;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: rgb(241, 237, 233);
-    border: 2px solid black;
-}
-
-
-.bor{
-    border: 2px solid black;
-    padding: 3px;
-    font: bold;
-    background-color: rgb(239, 234, 228);
-}
-.img{
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin: 4px;
-    border: 2px solid black;
-}
-*{
-  font-weight: 700;
-}
-#B2R,#B3R,#B4R{
-  background-color: rgb(255, 0, 0);
-  color: aliceblue;
-}
-#B1,#B2,#B3,#B4{
-  background-color: rgb(49, 255, 70);
-  color: black;
-}
-.SR_NO{
   font-weight: 1000;
-  font-size: 20px;
-  width: 70px;
-  
+  background-color: rgb(3, 3, 5);
+  border: 2px solid black;
+color: #dfe3f0;
+width: fit-content;
+padding: 4px;
 }
-    </STyle>
+
+#Payment_gatway1,#Payment_gatway2{
+  border: 2px solid black;
+  padding: 5px;
+  width: fit-content;
+  background-color: rgb(179, 240, 240);
+}
+#qr_img{
+  border: 2px solid black;
+  height: 44vh;
+  width: 90%;
+  padding: 1%;
+}
+  </style>
 </head>
 <body>
-    <div id="alldiv1">
-    <div id="all1">
-      <DIV class="heding">
-        <img class="img" src="logo.png" alt="logo">
-        सह्याद्री-कलेक्शन(SC)रहिमतपूर
-        <img src="logo.png" alt="logo">
-        <br>
-    </DIV>
-    <div>
-      SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
-      For more shopping scan qr code or visit:- https://SC2025.github.io/SC/ 
-</div>
-    <textarea name="paragraph_text" cols="50" rows="10" id="A1"></textarea>
-<P id="C1"></p>
-    <BUtton id="B1">submit</BUtton>
- 
-</div>
 
 
-<div id="all2">
-  <DIV class="heding">
-    <img class="img" src="logo.png" alt="logo">
-    सह्याद्री-कलेक्शन(SC)रहिमतपूर
-    <img src="logo.png" alt="logo">
+
+<div id="section_A">
+
+  <div class="opacity_0">
+
+    <div id="pree_id"></div>
+    <div id="last_id"></div>
+    <div id="order_del_date"></div>
+
+  </div>
+
+  <p>नाव :- <input id="name" type="text"></p>
+
+<p  >गाव निवडा :- 
+<select name=""  id="addres_add">
+<option value="rahimatpur">Rahimatpur</option>
+<option value="boriv">Boriv</option>
+<option value="Naharwadi">Naharwadi</option>
+<option value="Other">Other</option>
+</select>
+
+
+
+   <p >संपूर्ण पत्ता लिहा :- 
+   <input id="address" type="text">
+   </p>
+
+
+    <p id="mobnopara">व्हॉट्सॲप मोबाईल नंबर :- <input id="mobno" type="number"></p></p>
+  
+    <p>वरील मोबाईल नंबर पुन्हा लिहा:- <button id="mobbtn">
+      <input id="mobnover" type="number">
+    </button></p>
+
+
+   
+    <p>Select product :-
+    <select  name="" id="product-name" 
+    onchange="alert(`${document.getElementById(`name`).value} 
+    तुम्ही  ${this.options[this.selectedIndex].text} हा प्रोड्कट निवडा आहे.
+    Please select quantity.`)">
+
+    
+    
+    <option value="13">Checks Multi-Color RUMAL 43 cm x 50 cm </option>
+    <option value="15">Checks Multi-Color RUMAL 50 cm x 53 cm</option>
+    <option value="21">Checks White-Color RUMAL 50 cm x 53 cm</option>
+    
+      <option value="20">L1</option>
+      <option value="20">L2</option>
+      <option value="12">J</option>
+    
+    
+      <option value="200">Gym sport Baniyan M Size (2 pises)</option>
+    <option value="105">Gym sport Baniyan  L size</option>
+    <option value="108">Gym sport Baniyan  XL size</option>
+    <option value="111">Gym sport Baniyan XXL font-size</option>
+    
+    <option  value="80" >ESSA Cotton Innerwear 85 CM </option>
+    <option  value="85" >ESSA Cotton Innerwear 90 CM </option>
+    <option  value="90">ESSA Cotton Innerwear 95 CM</option>
+    <option  value="95">ESSA Cotton Innerwear 100 CM</option>
+    
+    <option value="90">LUX Cotton Innerwear 85 CM</option>
+    <option value="91">LUX Cotton Innerwear 90 CM</option>
+    <option value="95">LUX Cotton Innerwear 95 CM</option>
+    <option value="110">LUX Cotton Innerwear 100 CM</option>
+    
+    <option value="105">Macho Cotton Innerwear  85 CM</option>
+    <option value="105">Macho Cotton Innerwear  90 CM</option>
+    <option value="115">Macho Cotton Innerwear 95 CM</option>
+    <option value="120">Macho Cotton Innerwear 100 CM</option>
+    
+    <option value="69">LUX white Banyan 85 CM</option>
+    <option value="69">LUX white Banyan 90 CM</option>
+    <option value="70">LUX white Banyan 95 CM</option>
+    <option value="70">LUX white Banyan 100 CM</option>
+    
+    <option value="75">LUX colour Banyan 85 CM</option>
+    <option value="78">LUX colour Banyan 90 CM</option>
+    <option value="83">LUX colour Banyan 95 CM</option>
+    <option value="88">LUX colour Banyan 100 CM</option>
+    
+    <option value="90">LUX white-lining Banyan 85 CM</option>
+    <option value="95">LUX white-lining Banyan 90 CM</option>
+    <option value="95">LUX white-lining Banyan 95 CM</option>
+    <option value="100">LUX white-lining Banyan 100 CM</option>
+    
+    
+    </select>
+  </p>
+
+  <P>Select quantity :-
+    <select name="" id="product-quntity">
+        <option id="a1" value="4">4  pieces</option>
+        <option value="6">6  pieces</option>
+        <option value="8">8  pieces</option>
+        <option value="10">10  pieces</option>
+        <option value="12">12  pieces</option>
+    </select>
+  </P>
+
     <br>
-</DIV>
-<div>
-  SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
-  For more shopping scan qr code or visit:- https://SC2025.github.io/SC/ 
-</div>
-    <textarea name="paragraph_text" cols="50" rows="10" id="A2"></textarea>
-<P id="C2"></p>
-    <BUtton id="B2">submit</BUtton>
-    <BUtton id="B2R">REMOVE</BUtton>
-
+    <button  class="button" id="secA_btn" onclick="secA()">view order summary</summary></button>
     
-</div>
-
-
-
-</div>
-
-
-
-<div id="alldiv2">
-    <div id="all3">
-      <DIV class="heding">
-        <img class="img" src="logo.png" alt="logo">
-        सह्याद्री-कलेक्शन(SC)रहिमतपूर
-        <img src="logo.png" alt="logo">
-        <br>
-    </DIV>
-    <div>
-      SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
-      For more shopping scan qr code or visit:- https://SC2025.github.io/SC/ 
-</div>
-    <textarea name="paragraph_text" cols="50" rows="10" id="A3"></textarea>
-<P id="C3"></p>
-    <BUtton id="B3">submit</BUtton>
-    <BUtton id="B3R">REMOVE</BUtton>
-
-</div>
-
-
-<div id="all4">
-    <DIV class="heding">
-        <img class="img" src="logo.png" alt="logo">
-        सह्याद्री-कलेक्शन(SC)रहिमतपूर
-        <img src="logo.png" alt="logo">
-        <br>
-    </DIV>
-    <div>
-      SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
-      For more shopping scan qr code or visit:- https://SC2025.github.io/SC/ 
-</div>
-    <textarea name="paragraph_text" cols="50" rows="10" id="A4"></textarea>
-<P id="C4"></p>
-    <BUtton id="B4">submit</BUtton>
-    <BUtton id="B4R">REMOVE</BUtton>
     
-</div>
+    
+    
+    </div>
 
 
+    <div id="L4J_2DIV">
+    <div id="LEGGINS">
+    <div class="heding">select your leggins colour</div>
+    <BR>
+<DIV id="L_1">Select 1st leegins  colour</DIV>
+<select id="leggise_1">
+       <option value="">BLACK colour</option>
+      <option value="">WHITE  colour</option>
+  
+      <option value="">RED  colour</option>
+      <option value="">dark RED colour</option>
+  
+       
+      <option value="">NAVY BLUE colour</option>
+      <option value="">ORANGE colour</option>
+  
+      <option value="">GREEN colour</option>
+      <option value="">SKIN colour</option>
+  
+      <option value="">PINK  colour</option>
+      <option value="">dark PINK colour</option>
+  
+      <option value="">BLUE colour</option>
+      <option value="">dark BLUE colour</option>
+  
+      <option value="">CREAM colour</option>
+      <option value="">dark CREAM colour</option>
+  
+      <option value="">SKY BLUE colour</option>
+      <option value="">dark SKY BLUE colour</option>
+  
+      
+      <option value="">YELLOW colour</option>
+      <option value="">MARRON colour</option>
+   
+</select>
+<div id="L_2">Select 2nd leggins colour</div>
+<select id="leggise_2">
+       <option value="">BLACK colour</option>
+      <option value="">WHITE  colour</option>
+  
+      <option value="">RED  colour</option>
+      <option value="">dark RED colour</option>
+  
+       
+      <option value="">NAVY BLUE colour</option>
+      <option value="">ORANGE colour</option>
+  
+      <option value="">GREEN colour</option>
+      <option value="">SKIN colour</option>
+  
+      <option value="">PINK  colour</option>
+      <option value="">dark PINK colour</option>
+  
+      <option value="">BLUE colour</option>
+      <option value="">dark BLUE colour</option>
+  
+      <option value="">CREAM colour</option>
+      <option value="">dark CREAM colour</option>
+  
+      <option value="">SKY BLUE colour</option>
+      <option value="">dark SKY BLUE colour</option>
+  
+      
+      <option value="">YELLOW colour</option>
+      <option value="">MARRON colour</option>
+   
+</select>
+<div id="L_3">dear customer optional colour</div>
+<select id="leggise_3">
+  <option value="">BLACK colour</option>
+ <option value="">WHITE  colour</option>
 
-</div>
+ <option value="">RED  colour</option>
+ <option value="">dark RED colour</option>
 
-<SCript>
-    document.getElementById("B1").addEventListener("click",function () {
-        document.getElementById("C1").innerText = document.getElementById("A1").value;
-        document.getElementById("A1").remove();
-        document.getElementById("B1").remove();
+  
+ <option value="">NAVY BLUE colour</option>
+ <option value="">ORANGE colour</option>
 
-    })
+ <option value="">GREEN colour</option>
+ <option value="">SKIN colour</option>
 
-    document.getElementById("B2").addEventListener("click",function () {
-        document.getElementById("C2").innerText = document.getElementById("A2").value;
-        document.getElementById("A2").remove();
-        document.getElementById("B2").remove();
-        document.getElementById("B2R").remove();
+ <option value="">PINK  colour</option>
+ <option value="">dark PINK colour</option>
 
-    })
+ <option value="">BLUE colour</option>
+ <option value="">dark BLUE colour</option>
 
-    document.getElementById("B3").addEventListener("click",function () {
-        document.getElementById("C3").innerText = document.getElementById("A3").value;
-        document.getElementById("A3").remove();
-        document.getElementById("B3").remove();
-        document.getElementById("B3R").remove();
-    })
+ <option value="">CREAM colour</option>
+ <option value="">dark CREAM colour</option>
 
-    document.getElementById("B4").addEventListener("click",function () {
-        document.getElementById("C4").innerText = document.getElementById("A4").value;
-        document.getElementById("A4").remove();
-        document.getElementById("B4").remove();
-        document.getElementById("B4R").remove();
-    })
-
-    document.getElementById("B2R").addEventListener("click",function (){
-    document.getElementById("all2").remove();
-    })
-
-    document.getElementById("B3R").addEventListener("click",function (){
-    document.getElementById("all3").remove();
-    })
-
-    document.getElementById("B4R").addEventListener("click",function (){
-    document.getElementById("all4").remove();
-    })
+ <option value="">SKY BLUE colour</option>
+ <option value="">dark SKY BLUE colour</option>
 
  
+ <option value="">YELLOW colour</option>
+ <option value="">MARRON colour</option>
 
-</SCript>
+</select>
+
+
+    </div>
+
+    <div id="JEANS">
+  <div class="heding">select your jeans colour</div>
+  <br>
+<div id="J_1">Select 1st jeans colour</div>
+<select name="" id="jeans_1">
+             <option value="">28 no.blue</option>
+             <option value="">28 no.grey</option>
+             <option value="">28 no.black</option>
+           
+             <option value="">30 no.blue</option>
+             <option value="">30 no.grey</option>
+             <option value="">30 no.black</option>
+           
+             <option value="">32 no.blue</option>
+             <option value="">32 no.grey</option>
+             <option value="">32 no.black</option>
+           
+             <option value="">34 no.blue</option>
+             <option value="">34 no.grey</option>
+             <option value="">34 no.black</option>
+           
+             <option value="">36 no.blue</option>
+             <option value="">36 no.grey</option>
+             <option value="">36 no.black</option>
+           
+   
+</select>
+
+<div id="J_2">Select 2nd jeans colour</div>
+<select name="" id="jeans_2">
+             <option value="">28 no.blue</option>
+             <option value="">28 no.grey</option>
+             <option value="">28 no.black</option>
+           
+             <option value="">30 no.blue</option>
+             <option value="">30 no.grey</option>
+             <option value="">30 no.black</option>
+           
+             <option value="">32 no.blue</option>
+             <option value="">32 no.grey</option>
+             <option value="">32 no.black</option>
+           
+             <option value="">34 no.blue</option>
+             <option value="">34 no.grey</option>
+             <option value="">34 no.black</option>
+           
+             <option value="">36 no.blue</option>
+             <option value="">36 no.grey</option>
+             <option value="">36 no.black</option>
+           
+   
+</select>
+
+<div id="J_3">dear customer optional colour</div>
+<select name="" id="jeans_3">
+             <option value="">28 no.blue</option>
+             <option value="">28 no.grey</option>
+             <option value="">28 no.black</option>
+           
+             <option value="">30 no.blue</option>
+             <option value="">30 no.grey</option>
+             <option value="">30 no.black</option>
+           
+             <option value="">32 no.blue</option>
+             <option value="">32 no.grey</option>
+             <option value="">32 no.black</option>
+           
+             <option value="">34 no.blue</option>
+             <option value="">34 no.grey</option>
+             <option value="">34 no.black</option>
+           
+             <option value="">36 no.blue</option>
+             <option value="">36 no.grey</option>
+             <option value="">36 no.black</option>
+           
+   
+</select>
+
+    </div>
+  </div>
+
+
+
+
+
+      <div id="section_B">
+        <!-- //secA -->
+       <div class="opacity_0" id="id_last"></div>
+
+       <div id="CONGRATULATION"></div>  
+       <br>
+       <br>
+        <div>name:-<div id="name_last"></div></div>
+  
+        <div>city:- <div id="city_last"></div></div>
+        <div>full address :- <div id="fulladdress_last"></div></div>
+        <div>whatspp mob.no:-  <div id="whatsappno_last"></div></div>
+     <div id="selectproduct_last"></div>
+     <div id="colour_last_div">
+      <div id="col_last_1"></div>
+      <div id="col_last_2"></div>
+      <div id="col_last_3"></div>
+     </div>
+     
+     <div>discount :- 20 %</div>
+   
+<div>quantity :-<div id="selectpro_quntity"></div></div>
+<div>prise :- <div id="product_prise"></div></div>
+<div id="order_date_last"></div>
+<div class="opacity_0" id="order_del_date_last"></div>
+<div id="upiID_last"></div>
+<br>
+
+<DIV id="Payment_gatway1"></DIV>
+
+        <img id="qr_img" src="qr.jpg" alt="qr.jpg">
+
+        <DIV id="Payment_gatway2"></DIV>
+
+   <br>
+   <div id="id_input" >Enter UPI transactiion id last 4 digit
+    <input  id="transaction_id" value="" type="number">
+   </div>
+   <div id="checkbox_div">
+    <div>i know all terms and conditions</div>
+    <input type="checkbox" id="myCheck">
+  </div>
+        <button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click to final submit
+
+        </button>
+       
+        </div> 
+
+<script>
+  //secA
+var name_first = document.getElementById("name");
+var city_first = document.getElementById("addres_add");
+var fulladdress_first = document.getElementById("address");
+var whatsappno_first = document.getElementById("mobno");
+var whatsappno_first_mobnover = document.getElementById("mobnover");
+var product_name_first = document.getElementById("product-name");
+var product_quntity_first = document.getElementById("product-quntity");
+var whatsapp_data_btn = document.getElementById("whatsapp_data");
+//secC
+var UPI_ID_first = document.getElementById("transaction_id");
+
+document.getElementById("mobbtn").addEventListener("click",function() {
+  document.getElementById("mobnopara").style.opacity = "0";
+})
+
+
+function secA(){
+
+  //pree order id
+function ORDER_ID_PREE() {
+      myDate = new Date
+            var hours = myDate.getHours(); 
+            hours = hours % 24; 
+            hours = hours ? hours : 24; 
+            var minutes = myDate.getMinutes(); 
+            minutes = minutes < 10 ? '0' + minutes : minutes; 
+            var myTime = "सह्याद्री-" + hours + minutes + "-"
+            document.getElementById("pree_id").innerHTML = myTime
+          } ;
+          ORDER_ID_PREE()
+
+//next order id
+function ORDER_ID_NEXT(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() );
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+        //PRINTING TODAY DATE
+        document.getElementById("order_date_last").innerHTML = `${day}.${month}.${year}`;
+    // Printing the present date
+    document.getElementById("last_id").innerHTML = `${month}${year}${day}-MPP`;
+  };
+    ORDER_ID_NEXT();
+
+        //delivered date 
+        function fifteen_days_after_date(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() + 15);
+   
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+
+    // Printing the DELIVERY date
+document.getElementById("order_del_date").innerHTML = `${day}.${month}.${year}`;
+
+   };
+   fifteen_days_after_date();
+
+    document.getElementById("id_last").innerHTML = document.getElementById("pree_id").innerHTML + document.getElementById("last_id").innerHTML;
+    
+    document.getElementById("order_del_date_last").innerHTML = document.getElementById("order_del_date").innerHTML;
+
+  
+if (name_first.value == "") {
+ alert("कृपया नाव लिहा");
+ name_first.style.backgroundColor = "rgb(239, 118, 118)";
+}
+else if(fulladdress_first.value == ""){
+alert("कृपया संपूर्ण पत्ता लिहा");
+fulladdress_first.style.backgroundColor = "rgb(239, 118, 118)";
+}
+else if(whatsappno_first.value == ""){
+alert("कृपया व्हॉट्सॲप चा मोबाईल नंबर लिहा")
+whatsappno_first.style.backgroundColor = "rgb(239, 118, 118)";
+document.getElementById("mobnopara").style.opacity = "1";
+
+}
+else if(whatsappno_first_mobnover.value == ""){
+  alert("कृपया व्हॉट्सॲप चा मोबाईल नंबर लिहा")
+  whatsappno_first_mobnover.style.backgroundColor = "rgb(239, 118, 118)";
+  document.getElementById("mobnopara").style.opacity = "1";
+
+}
+else if(whatsappno_first.value.length != 10){
+alert(
+  `${name_first.value} तुम्ही
+    10 अंकी मोबाईल नंबर एंटर करा 
+    तुम्ही ${whatsappno_first.value.length} अंकी मोबाईल नंबर लिहित आहात 
+    कृपया मोबाईल नंबर तपासा आणि पुन्हा लिहा`);
+    document.getElementById("mobnopara").style.opacity = "1";
+    whatsappno_first.style.backgroundColor = "rgb(239, 118, 118)";
+  }
+else if(whatsappno_first.value != whatsappno_first_mobnover.value){
+alert(`${name_first.value} 
+आपण ${whatsappno_first.value} आणि ${whatsappno_first_mobnover.value}
+    लिहला आहे;
+    मोबाईल नंबर मॅच होत नाही;
+
+    टीप(कृपया दोन्ही ठिकाणी एकच मोबाईल नंबर लिहा)
+    `);
+    document.getElementById("mobnopara").style.opacity = "1";
+    whatsappno_first.style.backgroundColor = "rgb(239, 118, 118)";
+    whatsappno_first_mobnover.style.backgroundColor = "rgb(239, 118, 118)";
+}
+  else{
+ //name
+ document.getElementById("name_last").innerHTML =  name_first.value;
+
+//city
+var selectElement_city = city_first;
+  var city_last = selectElement_city.value;
+document.getElementById("city_last").innerHTML = city_last;
+
+//full address
+document.getElementById("fulladdress_last").innerHTML = fulladdress_first.value;
+
+//whatsapp no
+var str = document.getElementById("mobnover").value
+ var n_1 = str.slice(0,2); 
+ var n_2 = str.slice(2,4);
+ var n_3 = str.slice(4,6);
+ var n_4 = str.slice(6,8);
+ var n_5 = str.slice(8,10);
+ document.getElementById("whatsappno_last").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
+
+
+
+
+//product name
+var selectElement_prod_name = product_name_first;
+  var product_name_last_name = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].text;
+  var product_name_last_prise = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].value;
+  document.getElementById("selectproduct_last").innerHTML = product_name_last_name;
+
+
+
+
+//product Quantity
+var selectElement_prod_quantitye = product_quntity_first;
+  var selectpro_quntity = selectElement_prod_quantitye.value;
+document.getElementById("selectpro_quntity").innerHTML = selectpro_quntity;
+
+
+
+//transfer charges
+if(selectpro_quntity * product_name_last_prise > 100){
+  transport_charge = 15
+}else if(selectpro_quntity * product_name_last_prise < 100) {
+  transport_charge = 10
+}
+console.log(transport_charge)
+
+//product prise
+document.getElementById("product_prise").innerHTML = `${selectpro_quntity}  X  ${product_name_last_prise} ADD ${transport_charge} RS transport charge = ${selectpro_quntity * product_name_last_prise + transport_charge} RS`;
+section_A.remove();
+
+
+// alert 
+alert(`${document.getElementById("name_last").innerHTML}
+  तुमची प्रोड्कट ची महिती सेव्ह झाली आहे.
+
+  प्रोड्कट = ${product_name_last_name};
+  प्रोड्कट RS = ${product_name_last_prise};
+    प्रोड्कट संख्या = ${selectpro_quntity};
+
+   कोणत्याही पेमेंट अँप ने हा कोड स्कॅन करून 
+   ${`${selectpro_quntity}  X ${product_name_last_prise}  + ${transport_charge} RS transport charge = ${selectpro_quntity * product_name_last_prise + transport_charge}`} RS 
+   पेमेंट करा. 
+        
+${selectpro_quntity * product_name_last_prise + transport_charge} RS  RS पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
+     
+${selectpro_quntity * product_name_last_prise + transport_charge} RS  RS पेमेंट झाले असेल तर फक्त UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि  लिहा.
+  `);
+
+  //CONGRATULATION
+document.getElementById("CONGRATULATION").innerHTML= 
+ `${name_first.value}
+ TUMHALA ${product_name_last_name} 1 set 20% DISCOUNT
+  DEUN ANI TRANSPOT CHARGE LAUN FAKT ANI FACCT 
+  ${(selectpro_quntity * product_name_last_prise + transport_charge) / selectpro_quntity}
+ LA PADALA AAHE TUMHI 20% SAVING KELI TYABADAL CONGRATULATIONS`;
+
+//payment getway
+document.getElementById("Payment_gatway1").innerHTML = `Payment getway = scan 
+ QR code and pay = ${selectpro_quntity * product_name_last_prise + transport_charge} RS`
+
+ document.getElementById("Payment_gatway2").innerHTML = `Payment getway = scan 
+ QR code and pay = ${selectpro_quntity * product_name_last_prise + transport_charge} RS`
+
+
+      //LEGGIND AND JEAND OPACITY
+      if(product_name_last_name == "L1"  ){
+  document.getElementById("JEANS").remove();
+}
+else if(product_name_last_name == "L2"  ){
+  document.getElementById("JEANS").remove();
+}
+else if(product_name_last_name == "J"){
+  document.getElementById("LEGGINS").remove();
+}
+else if(product_name_last_name == "J1"){
+  document.getElementById("LEGGINS").remove();
+}
+else{
+  document.getElementById("colour_last_div").remove();
+  document.getElementById("L4J_2DIV").remove();
+}
+};
+}
+
+
+function gotowhatsapp(){
+
+
+if(document.getElementById("selectproduct_last").innerHTML == "L1"){
+  var selectElement_L1_COL = document.getElementById("leggise_1");
+  var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_L1;
+console.log(COL_L1);
+var COLOUR1 = COL_L1;
+
+  var selectElement_L2_COL = document.getElementById("leggise_2");
+  var COL_L2 = selectElement_L2_COL.options[selectElement_L2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_L2;
+  console.log(COL_L2);
+  var COLOUR2 = COL_L2;
+
+  var selectElement_L3_COL = document.getElementById("leggise_3");
+  var COL_L3 = selectElement_L3_COL.options[selectElement_L3_COL.selectedIndex].text;
+  document.getElementById("col_last_3").innerHTML = COL_L3;
+console.log(COL_L3);
+var COLOUR3 = COL_L3;
+
+}
+else if(document.getElementById("selectproduct_last").innerHTML == "L2"){
+  var selectElement_L1_COL = document.getElementById("leggise_1");
+  var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_L1;
+console.log(COL_L1);
+var COLOUR1 = COL_L1;
+
+  var selectElement_L2_COL = document.getElementById("leggise_2");
+  var COL_L2 = selectElement_L2_COL.options[selectElement_L2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_L2;
+  console.log(COL_L2);
+  var COLOUR2 = COL_L2;
+
+  var selectElement_L3_COL = document.getElementById("leggise_3");
+  var COL_L3 = selectElement_L3_COL.options[selectElement_L3_COL.selectedIndex].text;
+  document.getElementById("col_last_3").innerHTML = COL_L3;
+console.log(COL_L3);
+var COLOUR3 = COL_L3;
+}
+
+
+else if(document.getElementById("selectproduct_last").innerHTML == "J"){
+  var selectElement_J1_COL = document.getElementById("jeans_1");
+  var COL_J1 = selectElement_J1_COL.options[selectElement_J1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_J1;
+console.log(COL_J1);
+var COLOUR1 = COL_J1;
+
+  var selectElement_J2_COL = document.getElementById("jeans_2");
+  var COL_J2 = selectElement_J2_COL.options[selectElement_J2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_J2;
+  console.log(COL_J2);
+  var COLOUR2 = COL_J2;
+
+
+  var selectElement_J3_COL = document.getElementById("jeans_3");
+  var COL_J3 = selectElement_J3_COL.options[selectElement_J3_COL.selectedIndex].text;
+  document.getElementById("col_last_3").innerHTML = COL_J3;
+console.log(COL_J3);
+var COLOUR3 = COL_J3;
+}
+
+else{
+  var COLOUR1 = "NA";
+  var COLOUR2 = "NA";
+  var COLOUR3 = "NA";
+}
+
+
+
+  if (document.getElementById("transaction_id").value == ""){
+alert(`${document.getElementById("name_last").innerHTML}
+ UPI ट्रान्झॅक्शन आयडीचे शेवटचे 4 अंक  लिहा`)
+document.getElementById("transaction_id").style.backgroundColor = "rgb(239, 118, 118)";
+
+}
+  else if(document.getElementById("transaction_id").value.length != 4 ){
+alert(`${document.getElementById("name_last").innerHTML}
+UPI ट्रान्झॅक्शन आयडीचे शेवटचे 4 अंक लिहा ;
+तुम्ही ${document.getElementById("transaction_id").value.length} अंक लिहत आहात.
+
+UPI ट्रान्झॅक्शन आयडी तपासा आणि पुन्हा लिहा`)
+  }
+  else if(document.getElementById("myCheck").checked != true){
+alert(`${document.getElementById("name_last").innerHTML}  
+कृपया चेकबॉक्सवर क्लिक करा.
+`);
+document.getElementById("checkbox_div").style.backgroundColor = "rgb(245, 153, 153";
+  }
+else{
+
+    var url = "https://wa.me/919834926132?text="
+
+    + "Order Details" + "%0a"
+
+    + "order ID -" +  document.getElementById("id_last").innerHTML + "%0a"
+
+  + document.getElementById("name_last").innerHTML + "%0a"
+
+  + document.getElementById("city_last").innerHTML + "," + document.getElementById("fulladdress_last").innerHTML + "%0a"+"%0a"
+
+  + document.getElementById("whatsappno_last").innerHTML + "%0a" + "%0a"
+
+  + document.getElementById("selectproduct_last").innerHTML + "%0a"
+
+  +   COLOUR1 + "/" +  COLOUR2 + "/"  + COLOUR3 + "%0a"
+
+  +"quntity:- " + document.getElementById("selectpro_quntity").innerHTML + "%0a"
+
+  + "discount :- 20 %" + "%0a"
+
+  + document.getElementById("product_prise").innerHTML + "%0a"
+
+  + "ORDER DATE" + " " + document.getElementById("order_date_last").innerHTML + "%0a"
+
+    + "order delivery before" + " " + document.getElementById("order_del_date_last").innerHTML + "*" + "%0a"
+
+  + "trans.ID:-XXXXXXX" +  UPI_ID_first.value + "%0a"
+
+  + "send SMS"
+  window.open(url,'_blank').focus();
+
+};
+
+
+}
+
+
+
+</script>
 </body>
 </html>
+
+
+
+
