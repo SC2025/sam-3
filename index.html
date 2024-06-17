@@ -104,6 +104,10 @@ padding: 4px;
   width: 90%;
   padding: 1%;
 }
+
+#CONGRATULATION{
+    background-color: rgb(235, 207, 170);
+}
   </style>
 </head>
 <body>
@@ -439,17 +443,13 @@ padding: 4px;
    <div id="id_input" >Enter UPI transactiion id last 4 digit
     <input  id="transaction_id" value="" type="number">
    </div>
-   <div id="checkbox_div">
-    <div>i know all terms and conditions</div>
-    <input type="checkbox" id="myCheck">
-  </div>
 
-        <button onclick="gotowhatsapp()"   class="button"  id="get-bill" >-Submit-
+<div id="myCheck"></div>
 
-        </button>
-       
-        </div> 
-
+       <div>-Submit- या बटन वर क्लिक करा. क्लिक केल्या नंतर तुम्ही व्हाट्सअप मध्ये जाल.व्हाट्सअप मध्ये SEND SMS करा. तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल</div>
+       <button onclick="gotowhatsapp()"   class="button"  id="get-bill" >-Submit-</button>
+    </div> 
+ 
 <script>
   //secA
 var name_first = document.getElementById("name");
@@ -671,18 +671,16 @@ ${selectpro_quntity * product_name_last_prise + selectpro_quntity *transport_cha
   `);
 
   //CONGRATULATION
-document.getElementById("CONGRATULATION").innerHTML= 
- `${name_first.value}
- तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन.
- पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा.क्लिक केल्या नंतर तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.
-आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल
- `;
+document.getElementById("CONGRATULATION").innerHTML= name_first.value +
+ "तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा. क्लिक केल्या नंतर  तुम्ही  व्हाट्सअप मध्ये जाल.व्हाट्सअप मध्ये SEND SMS करा तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल. ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल";
 
  // WHATSAPP ALRT
 setTimeout(() => {
     alert( `${name_first.value}
  तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन.
- पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा.क्लिक केल्या नंतर तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.
+ पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा.
+ क्लिक केल्या नंतर  तुम्ही  व्हाट्सअप मध्ये जाल.
+व्हाट्सअप मध्ये SEND SMS करा तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.
 आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल
  `)
 }, 10000);
@@ -694,19 +692,36 @@ document.getElementById("Payment_gatway1").innerHTML = `Payment getway = scan
  document.getElementById("Payment_gatway2").innerHTML = `Payment getway = scan 
  QR code and pay = ${selectpro_quntity * product_name_last_prise + (selectpro_quntity *transport_charge)} RS`
 
+//myCheck para
+document.getElementById("myCheck").innerHTML = `
+I am ${name_first.value}. I know all Terms and Conditions
+`
+
 
       //LEGGIND AND JEAND OPACITY
       if(product_name_last_name == "L1"  ){
   document.getElementById("JEANS").remove();
+  alert(`${name_first.value}
+  select your ${product_name_last_name} colour;
+  `)
 }
 else if(product_name_last_name == "L2"  ){
   document.getElementById("JEANS").remove();
+  alert(`${name_first.value}
+  select your ${product_name_last_name} colour;
+  `)
 }
 else if(product_name_last_name == "J"){
   document.getElementById("LEGGINS").remove();
+  alert(`${name_first.value}
+  select your ${product_name_last_name} colour;
+  `)
 }
 else if(product_name_last_name == "J1"){
   document.getElementById("LEGGINS").remove();
+  alert(`${name_first.value}
+  select your ${product_name_last_name} colour;
+  `)
 }
 else{
   document.getElementById("colour_last_div").remove();
@@ -803,12 +818,6 @@ UPI ट्रान्झॅक्शन आयडीचे शेवटचे 4
 तुम्ही ${document.getElementById("transaction_id").value.length} अंक लिहत आहात.
 
 UPI ट्रान्झॅक्शन आयडी तपासा आणि पुन्हा लिहा`)
-  }
-  else if(document.getElementById("myCheck").checked != true){
-alert(`${document.getElementById("name_last").innerHTML}  
-कृपया चेकबॉक्सवर क्लिक करा.
-`);
-document.getElementById("checkbox_div").style.backgroundColor = "rgb(245, 153, 153";
   }
 else{
 
