@@ -13,7 +13,7 @@ html,body{
 width: 100%;
 height: 100%;}
 
-#section_A,#section_B{
+#section_A,#section_B,#sec_pro_inf{
   background-color: #dfe3f0;
   width: 100%;
   font: bold;
@@ -24,9 +24,10 @@ height: 100%;}
  font-size: 13PX;
  font-weight: 900;
 }
-#section_B{
-    opacity: 0;
+#section_B,#sec_pro_inf{
+    opacity: 1;
     margin-top: 1000px;
+   
 }
 
 input{
@@ -98,16 +99,14 @@ padding: 4px;
   width: fit-content;
   background-color: rgb(179, 240, 240);
 }
-#qr_img{
+#qr_img,img{
   border: 2px solid black;
   height: 44vh;
   width: 90%;
   padding: 1%;
 }
 
-#CONGRATULATION{
-    background-color: rgb(235, 207, 170);
-}
+
   </style>
 </head>
 <body>
@@ -149,7 +148,18 @@ padding: 4px;
 
 
    
-    <p>Select product :-
+
+
+    <br>
+    <button  class="button" id="secA_btn" onclick="secA()">view order summary</summary></button>
+    
+    </div>
+
+
+
+
+<div id="sec_pro_inf">
+  <p>Select product :-
     <select  name="" id="product-name" 
     onchange="alert(`${document.getElementById(`name`).value} 
     तुम्ही  ${this.options[this.selectedIndex].text} हा प्रोड्कट निवडा आहे.
@@ -160,10 +170,14 @@ padding: 4px;
     <option value="13">Checks Multi-Color RUMAL 43 cm x 50 cm </option>
     <option value="15">Checks Multi-Color RUMAL 50 cm x 53 cm</option>
     <option value="21">Checks White-Color RUMAL 50 cm x 53 cm</option>
-    
-      <option value="20">L1</option>
-      <option value="20">L2</option>
-      <option value="12">J</option>
+   
+    <option value="20"> Hirshita L sizw leggins</option>
+    <option value="20"> Hirshita XL sizw leggins</option>
+      <option value="20">Lyra leggings ANKLE length</option>
+      <option value="20">Lyra leggings FULL length</option>
+      <option value="20">JEANS</option>
+      <option value="12">Petticoats 38-40 no.</option>
+      <option value="12">Petticoats 42 no.</option>
     
     
       <option value="200">Gym sport Baniyan M Size (2 pises)</option>
@@ -217,27 +231,18 @@ padding: 4px;
     </select>
   </P>
 
-    <br>
-    <button  class="button" id="secA_btn" onclick="secA()">view order summary</summary></button>
-    
-    
-    
-    
-    </div>
-
-
-
-
-
+  <button id="colour">click</button>
+</div>
 
 
 
       <div id="section_B">
         <!-- //secb -->
-        <div id="L4J_2DIV">
+        <div id="L&j&p_DIV">
             <div id="LEGGINS">
             <div class="heding">select your leggins colour</div>
             <BR>
+              <img src="colour_leggins.png" alt="">
         <DIV id="L_1">Select 1st leegins  colour</DIV>
         <select id="leggise_1">
                <option value="">BLACK colour</option>
@@ -399,6 +404,79 @@ padding: 4px;
         </select>
         
             </div>
+
+
+
+
+
+            <div id="Petticoat">
+              <div class="heding">select your Petticoat colour</div>
+              <BR>
+                  <img src="colour_petticote.png" alt="Petticoat_1_colour">
+          <DIV id="P_1">Select 1st Petticoat colour</DIV>
+      
+      
+          <select id="Petticoat_1">
+                 <option value="">BLACK colour</option>
+                <option value="">WHITE  colour</option>
+                <option value="">RED  colour</option>
+                <option value="">NAVY BLUE colour</option>
+      
+                <option value="">ORANGE colour</option>
+                <option value="">GREEN colour</option>
+                <option value="">SKIN colour</option>
+                <option value="">PINK  colour</option>
+      
+            
+                <option value="">BLUE colour</option>
+                <option value="">CREAM colour</option>              
+                <option value="">SKY BLUE colour</option>                  
+                <option value="">YELLOW colour</option>
+                <option value="">MARRON colour</option>
+             
+          </select>
+          <div id="P_2">Select 2nd Petticoat colour</div>
+          <select id="Petticoat_2">
+              <option value="">BLACK colour</option>
+              <option value="">WHITE  colour</option>
+              <option value="">RED  colour</option>
+              <option value="">NAVY BLUE colour</option>
+      
+              <option value="">ORANGE colour</option>
+              <option value="">GREEN colour</option>
+              <option value="">SKIN colour</option>
+              <option value="">PINK  colour</option>
+      
+          
+              <option value="">BLUE colour</option>
+              <option value="">CREAM colour</option>              
+              <option value="">SKY BLUE colour</option>                  
+              <option value="">YELLOW colour</option>
+              <option value="">MARRON colour</option>
+             
+          </select>
+          <div id="P_3">आमची टीम तुम्ही निवडलेला कलर देण्याचा 100% प्रयत्न करेल पण जर स्टोरेज मध्ये वरील 2 कलर नसतील तर तुम्ही कोणता कॉलवर घेऊ इच्छिता.</div>
+          <select id="Petticoat_3">
+              <option value="">BLACK colour</option>
+              <option value="">WHITE  colour</option>
+              <option value="">RED  colour</option>
+              <option value="">NAVY BLUE colour</option>
+      
+              <option value="">ORANGE colour</option>
+              <option value="">GREEN colour</option>
+              <option value="">SKIN colour</option>
+              <option value="">PINK  colour</option>
+      
+          
+              <option value="">BLUE colour</option>
+              <option value="">CREAM colour</option>              
+              <option value="">SKY BLUE colour</option>                  
+              <option value="">YELLOW colour</option>
+              <option value="">MARRON colour</option>
+          
+          </select>
+          
+              </div>
           </div>
 
 
@@ -406,7 +484,7 @@ padding: 4px;
 
        <div class="opacity_0" id="id_last"></div>
 
-       <div id="CONGRATULATION"></div>  
+      
       <div>product Summary</div>
      
         <div>name:-<div id="name_last"></div></div>
@@ -446,7 +524,7 @@ padding: 4px;
 
 <div id="myCheck"></div>
 
-       <div>-Submit- या बटन वर क्लिक करा. क्लिक केल्या नंतर तुम्ही व्हाट्सअप मध्ये जाल.व्हाट्सअप मध्ये SEND SMS करा. तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल</div>
+       <div>तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन पेमेंट झाल्या नंतर-Submit- या बटन वर क्लिक करा. क्लिक केल्या नंतर तुम्ही व्हाट्सअप मध्ये जाल.व्हाट्सअप मध्ये SEND SMS करा. तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल</div>
        <button onclick="gotowhatsapp()"   class="button"  id="get-bill" >-Submit-</button>
     </div> 
  
@@ -595,10 +673,6 @@ alert(`${name_first.value}
     whatsappno_first_mobnover.style.backgroundColor = "rgb(239, 118, 118)";
 }
   else{
-//sec b opacity 1
-
-document.getElementById("section_B").style.opacity = "1";
-document.getElementById("section_B").style.marginTop = "0";
 
 
  //name
@@ -621,9 +695,25 @@ var str = document.getElementById("mobnover").value
  var n_5 = str.slice(8,10);
  document.getElementById("whatsappno_last").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
 
+ alert(`${name_first.value} प्रोड्कट निवडा`)
+
+ section_A.remove();
+
+ //sec sec_pro_inf opacity 1
+
+document.getElementById("sec_pro_inf").style.opacity = "1";
+document.getElementById("sec_pro_inf").style.marginTop = "0";
 
 
 
+};
+}
+
+
+
+document.getElementById("colour").addEventListener("click",function () {
+
+  ////
 //product name
 var selectElement_prod_name = product_name_first;
   var product_name_last_name = selectElement_prod_name.options[selectElement_prod_name.selectedIndex].text;
@@ -641,16 +731,16 @@ document.getElementById("selectpro_quntity").innerHTML = selectpro_quntity;
 
 
 //transfer charges
-if(selectpro_quntity * product_name_last_prise > 100){
+if(product_name_last_prise > 100){
+  transport_charge = 20
+}else if(product_name_last_prise < 100) {
   transport_charge = 15
-}else if(selectpro_quntity * product_name_last_prise < 100) {
-  transport_charge = 10
 }
 console.log(transport_charge)
 
 //product prise
 document.getElementById("product_prise").innerHTML = `${selectpro_quntity}  X  ${product_name_last_prise} ADD ${selectpro_quntity *transport_charge} RS transport charge = ${selectpro_quntity * product_name_last_prise + (selectpro_quntity * transport_charge)} RS`;
-section_A.remove();
+
 
 
 // alert 
@@ -670,15 +760,11 @@ ${selectpro_quntity * product_name_last_prise + selectpro_quntity *transport_cha
 ${selectpro_quntity * product_name_last_prise + selectpro_quntity *transport_charge} RS  RS पेमेंट झाले असेल तर फक्त UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि  लिहा.
   `);
 
-  //CONGRATULATION
-document.getElementById("CONGRATULATION").innerHTML= name_first.value +
- "तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा. क्लिक केल्या नंतर  तुम्ही  व्हाट्सअप मध्ये जाल.व्हाट्सअप मध्ये SEND SMS करा तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल. ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल";
 
  // WHATSAPP ALRT
 setTimeout(() => {
     alert( `${name_first.value}
- तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन.
- पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा.
+ "तुम्ही 20% ची बचत केली त्याबद्दल अभिनंदन पेमेंट झाल्या नंतर -Submit- या बटन वर क्लिक करा.
  क्लिक केल्या नंतर  तुम्ही  व्हाट्सअप मध्ये जाल.
 व्हाट्सअप मध्ये SEND SMS करा तुम्हाला व्हाट्सअप वर तुम्हाला तुमचा 1 ऑर्डर आयडी भेटेल.
 आयडी भेटल्या नंतर तुमची ऑर्डर आमच्या टीम ला भेटेल.ऑर्डर ची माहिती तपासून आमची टीम तुमची ऑर्डर तुम्हाला लवकरच पाठवेल
@@ -699,42 +785,55 @@ I am ${name_first.value}. I know all Terms and Conditions
 
 
       //LEGGIND AND JEAND OPACITY
-      if(product_name_last_name == "L1"  ){
+      if(product_name_last_name == "Lyra leggings ANKLE length" || product_name_last_name == "Lyra leggings FULL length"|| product_name_last_name == "Hirshita L sizw leggins"|| product_name_last_name == "Hirshita XL sizw leggins"){
   document.getElementById("JEANS").remove();
+  document.getElementById("Petticoat").remove();
   alert(`${name_first.value}
   select your ${product_name_last_name} colour;
   `)
 }
-else if(product_name_last_name == "L2"  ){
+else if(product_name_last_name == "JEANS"){
+  document.getElementById("LEGGINS").remove();
+  document.getElementById("Petticoat").remove();
+  alert(`${name_first.value}
+  select your ${product_name_last_name} colour;
+  `)
+}
+else if(product_name_last_name == "Petticoats 38-40 no."||product_name_last_name == "Petticoats 42 no."){
+  document.getElementById("LEGGINS").remove();
   document.getElementById("JEANS").remove();
-  alert(`${name_first.value}
-  select your ${product_name_last_name} colour;
-  `)
-}
-else if(product_name_last_name == "J"){
-  document.getElementById("LEGGINS").remove();
-  alert(`${name_first.value}
-  select your ${product_name_last_name} colour;
-  `)
-}
-else if(product_name_last_name == "J1"){
-  document.getElementById("LEGGINS").remove();
   alert(`${name_first.value}
   select your ${product_name_last_name} colour;
   `)
 }
 else{
-  document.getElementById("colour_last_div").remove();
-  document.getElementById("L4J_2DIV").remove();
+
+  document.getElementById("L&j&p_DIV").remove();
 }
-};
-}
+
+
+sec_pro_inf.remove();
+
+//sec section_B opacity 1
+
+document.getElementById("section_B").style.opacity = "1";
+document.getElementById("section_B").style.marginTop = "0";
+
+})
+
+
+
+
+
+
+
+
 
 
 function gotowhatsapp(){
 
 
-if(document.getElementById("selectproduct_last").innerHTML == "L1"){
+if(document.getElementById("selectproduct_last").innerHTML == "Lyra leggings ANKLE length" || document.getElementById("selectproduct_last").innerHTML == "Lyra leggings FULL length"|| document.getElementById("selectproduct_last").innerHTML =="Hirshita L sizw leggins"|| document.getElementById("selectproduct_last").innerHTML == "Hirshita XL sizw leggins"){
   var selectElement_L1_COL = document.getElementById("leggise_1");
   var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
   document.getElementById("col_last_1").innerHTML = COL_L1;
@@ -754,28 +853,9 @@ console.log(COL_L3);
 var COLOUR3 = COL_L3;
 
 }
-else if(document.getElementById("selectproduct_last").innerHTML == "L2"){
-  var selectElement_L1_COL = document.getElementById("leggise_1");
-  var COL_L1 = selectElement_L1_COL.options[selectElement_L1_COL.selectedIndex].text;
-  document.getElementById("col_last_1").innerHTML = COL_L1;
-console.log(COL_L1);
-var COLOUR1 = COL_L1;
-
-  var selectElement_L2_COL = document.getElementById("leggise_2");
-  var COL_L2 = selectElement_L2_COL.options[selectElement_L2_COL.selectedIndex].text;
-  document.getElementById("col_last_2").innerHTML = COL_L2;
-  console.log(COL_L2);
-  var COLOUR2 = COL_L2;
-
-  var selectElement_L3_COL = document.getElementById("leggise_3");
-  var COL_L3 = selectElement_L3_COL.options[selectElement_L3_COL.selectedIndex].text;
-  document.getElementById("col_last_3").innerHTML = COL_L3;
-console.log(COL_L3);
-var COLOUR3 = COL_L3;
-}
 
 
-else if(document.getElementById("selectproduct_last").innerHTML == "J"){
+else if(document.getElementById("selectproduct_last").innerHTML == "JEANS"){
   var selectElement_J1_COL = document.getElementById("jeans_1");
   var COL_J1 = selectElement_J1_COL.options[selectElement_J1_COL.selectedIndex].text;
   document.getElementById("col_last_1").innerHTML = COL_J1;
@@ -797,12 +877,35 @@ var COLOUR3 = COL_J3;
 
 
 }
+else if(document.getElementById("selectproduct_last").innerHTML == "Petticoats 38-40 no."||document.getElementById("selectproduct_last").innerHTML == "Petticoats 42 no."){
+  var selectElement_P1_COL = document.getElementById("Petticoat_1");
+  var COL_P1 = selectElement_P1_COL.options[selectElement_P1_COL.selectedIndex].text;
+  document.getElementById("col_last_1").innerHTML = COL_P1;
+console.log(COL_P1);
+var COLOUR1 = COL_P1;
+
+  var selectElement_P2_COL = document.getElementById("Petticoat_2");
+  var COL_P2 = selectElement_P2_COL.options[selectElement_P2_COL.selectedIndex].text;
+  document.getElementById("col_last_2").innerHTML = COL_P2;
+  console.log(COL_P2);
+  var COLOUR2 = COL_P2;
+
+
+  var selectElement_P3_COL = document.getElementById("Petticoat_3");
+  var COL_P3 = selectElement_P3_COL.options[selectElement_P3_COL.selectedIndex].text;
+  document.getElementById("col_last_3").innerHTML = COL_P3;
+console.log(COL_P3);
+var COLOUR3 = COL_P3;
+
+
+}
 
 else{
   var COLOUR1 = "NA";
   var COLOUR2 = "NA";
   var COLOUR3 = "NA";
 }
+
 
 
 
